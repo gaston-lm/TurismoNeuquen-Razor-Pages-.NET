@@ -4,7 +4,7 @@ namespace TurismoNeuquen.Models
 {
     public class DbMemoria : DbContext
     {
-        public DbSet<Atraction> Atracciones { get; set; }
+        public DbSet<Attraction> Atracciones { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
