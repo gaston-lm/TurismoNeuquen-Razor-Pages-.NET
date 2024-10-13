@@ -1,22 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\gaston\\OneDrive - Universidad Torcuato Di Tella\\Di Tella\\2024 - 2do Semestre\\Arquitectura Web\\tp_arq_web\\src\\TurismoNeuquen\\",
+  "WorkspaceRootPath": "C:\\Users\\valen\\OneDrive\\Escritorio\\Bony\\Di tella\\ARQ_WEB\\ARQ_WEB_TP\\TurismoNeuquen\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E1998EF6-6D6B-4F92-8F98-6D43F232EAD8}|TurismoNeuquen.csproj|c:\\users\\gaston\\onedrive - universidad torcuato di tella\\di tella\\2024 - 2do semestre\\arquitectura web\\tp_arq_web\\src\\turismoneuquen\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{E1998EF6-6D6B-4F92-8F98-6D43F232EAD8}|TurismoNeuquen.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{E1998EF6-6D6B-4F92-8F98-6D43F232EAD8}|TurismoNeuquen.csproj|c:\\users\\valen\\onedrive\\escritorio\\bony\\di tella\\arq_web\\arq_web_tp\\turismoneuquen\\pages\\a\u00F1adiratraccion.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E1998EF6-6D6B-4F92-8F98-6D43F232EAD8}|TurismoNeuquen.csproj|solutionrelative:pages\\a\u00F1adiratraccion.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E1998EF6-6D6B-4F92-8F98-6D43F232EAD8}|TurismoNeuquen.csproj|c:\\users\\gaston\\onedrive - universidad torcuato di tella\\di tella\\2024 - 2do semestre\\arquitectura web\\tp_arq_web\\src\\turismoneuquen\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E1998EF6-6D6B-4F92-8F98-6D43F232EAD8}|TurismoNeuquen.csproj|solutionrelative:pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E1998EF6-6D6B-4F92-8F98-6D43F232EAD8}|TurismoNeuquen.csproj|c:\\users\\valen\\onedrive\\escritorio\\bony\\di tella\\arq_web\\arq_web_tp\\turismoneuquen\\pages\\a\u00F1adiratraccion.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1998EF6-6D6B-4F92-8F98-6D43F232EAD8}|TurismoNeuquen.csproj|solutionrelative:pages\\a\u00F1adiratraccion.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E1998EF6-6D6B-4F92-8F98-6D43F232EAD8}|TurismoNeuquen.csproj|c:\\users\\gaston\\onedrive - universidad torcuato di tella\\di tella\\2024 - 2do semestre\\arquitectura web\\tp_arq_web\\src\\turismoneuquen\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E1998EF6-6D6B-4F92-8F98-6D43F232EAD8}|TurismoNeuquen.csproj|solutionrelative:pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E1998EF6-6D6B-4F92-8F98-6D43F232EAD8}|TurismoNeuquen.csproj|c:\\users\\valen\\onedrive\\escritorio\\bony\\di tella\\arq_web\\arq_web_tp\\turismoneuquen\\models\\dbmemoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1998EF6-6D6B-4F92-8F98-6D43F232EAD8}|TurismoNeuquen.csproj|solutionrelative:models\\dbmemoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E1998EF6-6D6B-4F92-8F98-6D43F232EAD8}|TurismoNeuquen.csproj|c:\\users\\gaston\\onedrive - universidad torcuato di tella\\di tella\\2024 - 2do semestre\\arquitectura web\\tp_arq_web\\src\\turismoneuquen\\pages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E1998EF6-6D6B-4F92-8F98-6D43F232EAD8}|TurismoNeuquen.csproj|solutionrelative:pages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E1998EF6-6D6B-4F92-8F98-6D43F232EAD8}|TurismoNeuquen.csproj|c:\\users\\valen\\onedrive\\escritorio\\bony\\di tella\\arq_web\\arq_web_tp\\turismoneuquen\\models\\atraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1998EF6-6D6B-4F92-8F98-6D43F232EAD8}|TurismoNeuquen.csproj|solutionrelative:models\\atraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,45 +26,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "site.css",
-              "DocumentMoniker": "C:\\Users\\gaston\\OneDrive - Universidad Torcuato Di Tella\\Di Tella\\2024 - 2do Semestre\\Arquitectura Web\\tp_arq_web\\src\\TurismoNeuquen\\wwwroot\\css\\site.css",
-              "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
-              "ToolTip": "C:\\Users\\gaston\\OneDrive - Universidad Torcuato Di Tella\\Di Tella\\2024 - 2do Semestre\\Arquitectura Web\\tp_arq_web\\src\\TurismoNeuquen\\wwwroot\\css\\site.css",
-              "RelativeToolTip": "wwwroot\\css\\site.css",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAACQAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-10-13T00:51:07.396Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\gaston\\OneDrive - Universidad Torcuato Di Tella\\Di Tella\\2024 - 2do Semestre\\Arquitectura Web\\tp_arq_web\\src\\TurismoNeuquen\\Pages\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Pages\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\gaston\\OneDrive - Universidad Torcuato Di Tella\\Di Tella\\2024 - 2do Semestre\\Arquitectura Web\\tp_arq_web\\src\\TurismoNeuquen\\Pages\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Pages\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAABkAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-13T00:48:07.543Z",
+              "Title": "DbMemoria.cs",
+              "DocumentMoniker": "C:\\Users\\valen\\OneDrive\\Escritorio\\Bony\\Di tella\\ARQ_WEB\\ARQ_WEB_TP\\TurismoNeuquen\\Models\\DbMemoria.cs",
+              "RelativeDocumentMoniker": "Models\\DbMemoria.cs",
+              "ToolTip": "C:\\Users\\valen\\OneDrive\\Escritorio\\Bony\\Di tella\\ARQ_WEB\\ARQ_WEB_TP\\TurismoNeuquen\\Models\\DbMemoria.cs",
+              "RelativeToolTip": "Models\\DbMemoria.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-13T02:29:28.088Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Index.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\gaston\\OneDrive - Universidad Torcuato Di Tella\\Di Tella\\2024 - 2do Semestre\\Arquitectura Web\\tp_arq_web\\src\\TurismoNeuquen\\Pages\\Index.cshtml.cs",
-              "RelativeDocumentMoniker": "Pages\\Index.cshtml.cs",
-              "ToolTip": "C:\\Users\\gaston\\OneDrive - Universidad Torcuato Di Tella\\Di Tella\\2024 - 2do Semestre\\Arquitectura Web\\tp_arq_web\\src\\TurismoNeuquen\\Pages\\Index.cshtml.cs",
-              "RelativeToolTip": "Pages\\Index.cshtml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAYAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "A\u00F1adirAtraccion.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\valen\\OneDrive\\Escritorio\\Bony\\Di tella\\ARQ_WEB\\ARQ_WEB_TP\\TurismoNeuquen\\Pages\\A\u00F1adirAtraccion.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\A\u00F1adirAtraccion.cshtml.cs",
+              "ToolTip": "C:\\Users\\valen\\OneDrive\\Escritorio\\Bony\\Di tella\\ARQ_WEB\\ARQ_WEB_TP\\TurismoNeuquen\\Pages\\A\u00F1adirAtraccion.cshtml.cs",
+              "RelativeToolTip": "Pages\\A\u00F1adirAtraccion.cshtml.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwBgAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-13T00:27:45.904Z",
+              "WhenOpened": "2024-10-13T02:21:28.715Z",
               "EditorCaption": ""
             },
             {
@@ -73,15 +60,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\gaston\\OneDrive - Universidad Torcuato Di Tella\\Di Tella\\2024 - 2do Semestre\\Arquitectura Web\\tp_arq_web\\src\\TurismoNeuquen\\Pages\\Index.cshtml",
-              "RelativeDocumentMoniker": "Pages\\Index.cshtml",
-              "ToolTip": "C:\\Users\\gaston\\OneDrive - Universidad Torcuato Di Tella\\Di Tella\\2024 - 2do Semestre\\Arquitectura Web\\tp_arq_web\\src\\TurismoNeuquen\\Pages\\Index.cshtml",
-              "RelativeToolTip": "Pages\\Index.cshtml",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAkAAAAGAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "A\u00F1adirAtraccion.cshtml",
+              "DocumentMoniker": "C:\\Users\\valen\\OneDrive\\Escritorio\\Bony\\Di tella\\ARQ_WEB\\ARQ_WEB_TP\\TurismoNeuquen\\Pages\\A\u00F1adirAtraccion.cshtml",
+              "RelativeDocumentMoniker": "Pages\\A\u00F1adirAtraccion.cshtml",
+              "ToolTip": "C:\\Users\\valen\\OneDrive\\Escritorio\\Bony\\Di tella\\ARQ_WEB\\ARQ_WEB_TP\\TurismoNeuquen\\Pages\\A\u00F1adirAtraccion.cshtml",
+              "RelativeToolTip": "Pages\\A\u00F1adirAtraccion.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-12T23:50:20.669Z",
+              "WhenOpened": "2024-10-13T02:06:28.146Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Atraction.cs",
+              "DocumentMoniker": "C:\\Users\\valen\\OneDrive\\Escritorio\\Bony\\Di tella\\ARQ_WEB\\ARQ_WEB_TP\\TurismoNeuquen\\Models\\Atraction.cs",
+              "RelativeDocumentMoniker": "Models\\Atraction.cs",
+              "ToolTip": "C:\\Users\\valen\\OneDrive\\Escritorio\\Bony\\Di tella\\ARQ_WEB\\ARQ_WEB_TP\\TurismoNeuquen\\Models\\Atraction.cs",
+              "RelativeToolTip": "Models\\Atraction.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAIAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-13T02:03:01.76Z",
               "EditorCaption": ""
             }
           ]

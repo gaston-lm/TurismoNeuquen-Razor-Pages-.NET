@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gaston\\OneDrive - Universidad Torcuato Di Tella\\Di Tella\\2024 - 2do Semestre\\Arquitectura Web\\tp_arq_web\\src\\TurismoNeuquen\\TurismoNeuquen.csproj": {}
+    "C:\\Users\\valen\\OneDrive\\Escritorio\\Bony\\Di tella\\ARQ_WEB\\ARQ_WEB_TP\\TurismoNeuquen\\TurismoNeuquen.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gaston\\OneDrive - Universidad Torcuato Di Tella\\Di Tella\\2024 - 2do Semestre\\Arquitectura Web\\tp_arq_web\\src\\TurismoNeuquen\\TurismoNeuquen.csproj": {
+    "C:\\Users\\valen\\OneDrive\\Escritorio\\Bony\\Di tella\\ARQ_WEB\\ARQ_WEB_TP\\TurismoNeuquen\\TurismoNeuquen.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gaston\\OneDrive - Universidad Torcuato Di Tella\\Di Tella\\2024 - 2do Semestre\\Arquitectura Web\\tp_arq_web\\src\\TurismoNeuquen\\TurismoNeuquen.csproj",
+        "projectUniqueName": "C:\\Users\\valen\\OneDrive\\Escritorio\\Bony\\Di tella\\ARQ_WEB\\ARQ_WEB_TP\\TurismoNeuquen\\TurismoNeuquen.csproj",
         "projectName": "TurismoNeuquen",
-        "projectPath": "C:\\Users\\gaston\\OneDrive - Universidad Torcuato Di Tella\\Di Tella\\2024 - 2do Semestre\\Arquitectura Web\\tp_arq_web\\src\\TurismoNeuquen\\TurismoNeuquen.csproj",
-        "packagesPath": "C:\\Users\\gaston\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gaston\\OneDrive - Universidad Torcuato Di Tella\\Di Tella\\2024 - 2do Semestre\\Arquitectura Web\\tp_arq_web\\src\\TurismoNeuquen\\obj\\",
+        "projectPath": "C:\\Users\\valen\\OneDrive\\Escritorio\\Bony\\Di tella\\ARQ_WEB\\ARQ_WEB_TP\\TurismoNeuquen\\TurismoNeuquen.csproj",
+        "packagesPath": "C:\\Users\\valen\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\valen\\OneDrive\\Escritorio\\Bony\\Di tella\\ARQ_WEB\\ARQ_WEB_TP\\TurismoNeuquen\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\gaston\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\valen\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -53,6 +53,14 @@
             "GoogleMapsHelpers": {
               "target": "Package",
               "version": "[0.1.4.1, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[8.0.10, )"
             },
             "microsoft-web-helpers": {
               "target": "Package",

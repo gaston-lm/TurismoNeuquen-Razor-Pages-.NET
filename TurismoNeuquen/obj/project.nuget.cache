@@ -1,23 +1,35 @@
 {
   "version": 2,
-  "dgSpecHash": "WvFjacwDyR0=",
+  "dgSpecHash": "GfbsFrpnu5U=",
   "success": true,
-  "projectFilePath": "C:\\Users\\gaston\\OneDrive - Universidad Torcuato Di Tella\\Di Tella\\2024 - 2do Semestre\\Arquitectura Web\\tp_arq_web\\src\\TurismoNeuquen\\TurismoNeuquen.csproj",
+  "projectFilePath": "C:\\Users\\valen\\OneDrive\\Escritorio\\Bony\\Di tella\\ARQ_WEB\\ARQ_WEB_TP\\TurismoNeuquen\\TurismoNeuquen.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\gaston\\.nuget\\packages\\googlemapshelpers\\0.1.4.1\\googlemapshelpers.0.1.4.1.nupkg.sha512",
-    "C:\\Users\\gaston\\.nuget\\packages\\microsoft-web-helpers\\2.1.20710.2\\microsoft-web-helpers.2.1.20710.2.nupkg.sha512",
-    "C:\\Users\\gaston\\.nuget\\packages\\microsoft.aspnet.razor\\2.0.20505\\microsoft.aspnet.razor.2.0.20505.nupkg.sha512",
-    "C:\\Users\\gaston\\.nuget\\packages\\microsoft.aspnet.webpages\\2.0.20505\\microsoft.aspnet.webpages.2.0.20505.nupkg.sha512",
-    "C:\\Users\\gaston\\.nuget\\packages\\microsoft.aspnet.webpages.data\\2.0.20505\\microsoft.aspnet.webpages.data.2.0.20505.nupkg.sha512",
-    "C:\\Users\\gaston\\.nuget\\packages\\microsoft.aspnet.webpages.webdata\\2.0.20505\\microsoft.aspnet.webpages.webdata.2.0.20505.nupkg.sha512",
-    "C:\\Users\\gaston\\.nuget\\packages\\microsoft.web.infrastructure\\1.0.0\\microsoft.web.infrastructure.1.0.0.nupkg.sha512"
+    "C:\\Users\\valen\\.nuget\\packages\\googlemapshelpers\\0.1.4.1\\googlemapshelpers.0.1.4.1.nupkg.sha512",
+    "C:\\Users\\valen\\.nuget\\packages\\microsoft-web-helpers\\2.1.20710.2\\microsoft-web-helpers.2.1.20710.2.nupkg.sha512",
+    "C:\\Users\\valen\\.nuget\\packages\\microsoft.aspnet.razor\\2.0.20505\\microsoft.aspnet.razor.2.0.20505.nupkg.sha512",
+    "C:\\Users\\valen\\.nuget\\packages\\microsoft.aspnet.webpages\\2.0.20505\\microsoft.aspnet.webpages.2.0.20505.nupkg.sha512",
+    "C:\\Users\\valen\\.nuget\\packages\\microsoft.aspnet.webpages.data\\2.0.20505\\microsoft.aspnet.webpages.data.2.0.20505.nupkg.sha512",
+    "C:\\Users\\valen\\.nuget\\packages\\microsoft.aspnet.webpages.webdata\\2.0.20505\\microsoft.aspnet.webpages.webdata.2.0.20505.nupkg.sha512",
+    "C:\\Users\\valen\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.10\\microsoft.entityframeworkcore.8.0.10.nupkg.sha512",
+    "C:\\Users\\valen\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\8.0.10\\microsoft.entityframeworkcore.abstractions.8.0.10.nupkg.sha512",
+    "C:\\Users\\valen\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\8.0.10\\microsoft.entityframeworkcore.analyzers.8.0.10.nupkg.sha512",
+    "C:\\Users\\valen\\.nuget\\packages\\microsoft.entityframeworkcore.inmemory\\8.0.10\\microsoft.entityframeworkcore.inmemory.8.0.10.nupkg.sha512",
+    "C:\\Users\\valen\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\8.0.0\\microsoft.extensions.caching.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\valen\\.nuget\\packages\\microsoft.extensions.caching.memory\\8.0.1\\microsoft.extensions.caching.memory.8.0.1.nupkg.sha512",
+    "C:\\Users\\valen\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\8.0.1\\microsoft.extensions.dependencyinjection.8.0.1.nupkg.sha512",
+    "C:\\Users\\valen\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.2\\microsoft.extensions.dependencyinjection.abstractions.8.0.2.nupkg.sha512",
+    "C:\\Users\\valen\\.nuget\\packages\\microsoft.extensions.logging\\8.0.1\\microsoft.extensions.logging.8.0.1.nupkg.sha512",
+    "C:\\Users\\valen\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.2\\microsoft.extensions.logging.abstractions.8.0.2.nupkg.sha512",
+    "C:\\Users\\valen\\.nuget\\packages\\microsoft.extensions.options\\8.0.2\\microsoft.extensions.options.8.0.2.nupkg.sha512",
+    "C:\\Users\\valen\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512",
+    "C:\\Users\\valen\\.nuget\\packages\\microsoft.web.infrastructure\\1.0.0\\microsoft.web.infrastructure.1.0.0.nupkg.sha512"
   ],
   "logs": [
     {
       "code": "NU1603",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "microsoft-web-helpers 2.1.20710.2 depends on Microsoft.AspNet.WebPages (>= 2.0.0 && < 2.1.0) but Microsoft.AspNet.WebPages 2.0.0 was not found. An approximate best match of Microsoft.AspNet.WebPages 2.0.20505 was resolved.",
+      "message": "microsoft-web-helpers 2.1.20710.2 depende de Microsoft.AspNet.WebPages (>= 2.0.0 && < 2.1.0), pero no se encontró Microsoft.AspNet.WebPages 2.0.0. Se resolvió una mejor coincidencia aproximada de Microsoft.AspNet.WebPages 2.0.20505.",
       "libraryId": "Microsoft.AspNet.WebPages",
       "targetGraphs": [
         "net8.0"
@@ -27,7 +39,7 @@
       "code": "NU1603",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "microsoft-web-helpers 2.1.20710.2 depends on Microsoft.AspNet.WebPages.WebData (>= 2.0.0 && < 2.1.0) but Microsoft.AspNet.WebPages.WebData 2.0.0 was not found. An approximate best match of Microsoft.AspNet.WebPages.WebData 2.0.20505 was resolved.",
+      "message": "microsoft-web-helpers 2.1.20710.2 depende de Microsoft.AspNet.WebPages.WebData (>= 2.0.0 && < 2.1.0), pero no se encontró Microsoft.AspNet.WebPages.WebData 2.0.0. Se resolvió una mejor coincidencia aproximada de Microsoft.AspNet.WebPages.WebData 2.0.20505.",
       "libraryId": "Microsoft.AspNet.WebPages.WebData",
       "targetGraphs": [
         "net8.0"
@@ -37,7 +49,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'GoogleMapsHelpers 0.1.4.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "message": "El paquete \"GoogleMapsHelpers 0.1.4.1\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" en lugar de la plataforma de destino del proyecto \"net8.0\". Puede que el paquete no sea totalmente compatible con el proyecto.",
       "libraryId": "GoogleMapsHelpers",
       "targetGraphs": [
         "net8.0"
@@ -47,7 +59,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'microsoft-web-helpers 2.1.20710.2' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "message": "El paquete \"microsoft-web-helpers 2.1.20710.2\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" en lugar de la plataforma de destino del proyecto \"net8.0\". Puede que el paquete no sea totalmente compatible con el proyecto.",
       "libraryId": "microsoft-web-helpers",
       "targetGraphs": [
         "net8.0"
@@ -57,7 +69,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'Microsoft.AspNet.Razor 2.0.20505' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "message": "El paquete \"Microsoft.AspNet.Razor 2.0.20505\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" en lugar de la plataforma de destino del proyecto \"net8.0\". Puede que el paquete no sea totalmente compatible con el proyecto.",
       "libraryId": "Microsoft.AspNet.Razor",
       "targetGraphs": [
         "net8.0"
@@ -67,7 +79,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'Microsoft.AspNet.WebPages 2.0.20505' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "message": "El paquete \"Microsoft.AspNet.WebPages 2.0.20505\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" en lugar de la plataforma de destino del proyecto \"net8.0\". Puede que el paquete no sea totalmente compatible con el proyecto.",
       "libraryId": "Microsoft.AspNet.WebPages",
       "targetGraphs": [
         "net8.0"
@@ -77,7 +89,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'Microsoft.AspNet.WebPages.Data 2.0.20505' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "message": "El paquete \"Microsoft.AspNet.WebPages.Data 2.0.20505\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" en lugar de la plataforma de destino del proyecto \"net8.0\". Puede que el paquete no sea totalmente compatible con el proyecto.",
       "libraryId": "Microsoft.AspNet.WebPages.Data",
       "targetGraphs": [
         "net8.0"
@@ -87,7 +99,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'Microsoft.AspNet.WebPages.WebData 2.0.20505' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "message": "El paquete \"Microsoft.AspNet.WebPages.WebData 2.0.20505\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" en lugar de la plataforma de destino del proyecto \"net8.0\". Puede que el paquete no sea totalmente compatible con el proyecto.",
       "libraryId": "Microsoft.AspNet.WebPages.WebData",
       "targetGraphs": [
         "net8.0"
@@ -97,7 +109,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'Microsoft.Web.Infrastructure 1.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "message": "El paquete \"Microsoft.Web.Infrastructure 1.0.0\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" en lugar de la plataforma de destino del proyecto \"net8.0\". Puede que el paquete no sea totalmente compatible con el proyecto.",
       "libraryId": "Microsoft.Web.Infrastructure",
       "targetGraphs": [
         "net8.0"
