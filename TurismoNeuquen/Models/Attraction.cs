@@ -1,11 +1,24 @@
 ﻿namespace TurismoNeuquen.Models;
 
-public class Attraction(string name, string description, double latitude, double longitude)
+public class Attraction : PointOfInterest
 {
-    public int Id { get; set; }
-    public string Name { get; set; } = name;
-    public string Description { get; set; } = description;
-    public double Latitude { get; set; } = latitude;
-    public double Longitude { get; set; } = longitude;
-    public bool State { get; set; } = false; // Default value
+    public List<string>? OpenDays { get; set; }
+    public TimeOnly? OpeningTime { get; set; }
+    public TimeOnly? ClosingTime { get; set; }
+
+    // Constructor
+    public Attraction(
+        string name,
+        string description,
+        double latitude,
+        double longitude,
+        List<string>? openDays = null,
+        TimeOnly? openingTime = null,
+        TimeOnly? closingTime = null
+    ) : base(name, description, latitude, longitude)
+    {
+        OpenDays = openDays;
+        OpeningTime = openingTime;
+        ClosingTime = closingTime;
+    }
 }

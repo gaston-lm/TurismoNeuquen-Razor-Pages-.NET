@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TurismoNeuquen")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fa90c08502c55d8cb3dd992193b8662725bfc436")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9185c0c5e4a833ba5ce33fb04a6aad4f7082a507")]
 [assembly: System.Reflection.AssemblyProductAttribute("TurismoNeuquen")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TurismoNeuquen")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,14 +1,21 @@
 ﻿namespace TurismoNeuquen.Models;
 
-public class Event(
-    string name,
-    string description,
-    double latitude,
-    double longitude,
-    DateTime eventDateBegin,
-    DateTime eventDateEnd)
-    : Attraction(name, description, latitude, longitude)
+public class Event : PointOfInterest
 {
-    public DateTime EventDateBegin { get; set; } = eventDateBegin;
-    public DateTime EventDateEnd { get; set; } = eventDateEnd;
+    public DateTime EventDateBegin { get; set; }
+    public DateTime EventDateEnd { get; set; }
+
+    // Constructor
+    public Event(
+        string name,
+        string description,
+        double latitude,
+        double longitude,
+        DateTime eventDateBegin,
+        DateTime eventDateEnd
+    ) : base(name, description, latitude, longitude)
+    {
+        EventDateBegin = eventDateBegin;
+        EventDateEnd = eventDateEnd;
+    }
 }
