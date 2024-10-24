@@ -12,10 +12,10 @@ namespace TurismoNeuquen.Data
         }
         public DbSet<PointOfInterest> PointsOfInterest { get; set; }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseInMemoryDatabase("MyDB");
-        }
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+        //    optionsBuilder.UseInMemoryDatabase("MyDB");
+        //}
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
