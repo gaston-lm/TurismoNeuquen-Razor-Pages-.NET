@@ -39,8 +39,8 @@ namespace TurismoNeuquen.Services
         }
         public void CreatePOI(PointOfInterest poi)
         {
-            _poiContext.Add(poi);
-            _poiContext.SaveChanges();
+            _poiContext.Add(poi); // REVISAR
+            //_poiContext.SaveChanges();
         }
     }
 }

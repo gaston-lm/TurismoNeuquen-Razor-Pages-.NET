@@ -11,10 +11,15 @@ public class PointOfInterest
     public double Longitude { get; set; }
     public bool State { get; set; } = false; // Default value
 
-    // Constructor
-    public PointOfInterest(string name, string description, double latitude, double longitude)
+    // Parameterless constructor required for model binding
+    public PointOfInterest()
     {
-        Id = _nextId++; // Assign and increment
+        Id = _nextId++;
+    }
+
+    // Main constructor
+    public PointOfInterest(string name, string description, double latitude, double longitude) : this()
+    {
         Name = name;
         Description = description;
         Latitude = latitude;
