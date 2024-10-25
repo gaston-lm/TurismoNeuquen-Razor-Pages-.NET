@@ -1,0 +1,21 @@
+﻿@page
+@model TurismoNeuquen.Pages.DetailsPoiModel
+@{
+}
+<div class="text-center">
+    <h1 class="display-4">@Model.PointOfInterest.Name</h1>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card mb-12 shadow-sm">
+                    <div class="card-body">
+                        <p class="card-text">@Model.PointOfInterest.Description</p>
+                        <p class="card-text">@Model.PointOfInterest.Latitude</p>
+                        <p class="card-text">@Model.PointOfInterest.Longitude</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

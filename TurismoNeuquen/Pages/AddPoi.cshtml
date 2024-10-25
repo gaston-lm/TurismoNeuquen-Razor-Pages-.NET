@@ -1,0 +1,11 @@
+﻿@page
+@model TurismoNeuquen.Pages.AddPoiModel
+<h1>Añadir Poi</h1>
+
+    <form method="post">
+        <input type="text" name="name" placeholder="Nombre" required />
+        <input type="text" name="description" placeholder="Descripción" required />
+        <input type="number" step="any" name="latitude" placeholder="Latitud" required />
+        <input type="number" step="any" name="longitude" placeholder="Longitud" required />
+    <button type="submit">Añadir</button>
+    </form>
