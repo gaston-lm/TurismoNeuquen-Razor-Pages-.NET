@@ -10,6 +10,6 @@ namespace TurismoNeuquen.Services
         void UpdatePOI(PointOfInterest poi);
         void DeletePOI(PointOfInterest poi);
 
-        void CreatePOI(PointOfInterest poi);
+        void CreatePOIAtt(Attraction poi);
     }
 }

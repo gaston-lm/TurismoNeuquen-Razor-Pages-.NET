@@ -12,12 +12,22 @@ namespace TurismoNeuquen.Data
         }
         public DbSet<PointOfInterest> PointsOfInterest { get; set; }
 
+        //protected override void OnModelCreating(ModelBuilder modelBuilder)
+        //{
+        //    modelBuilder.Entity<Attraction>().HasData(
+        //        new PointOfInterest("Monumento a San Martín", "Monumento al General San Martín", -38.9517, -68.0592),
+        //        new PointOfInterest("Museo Nacional", "Museo en Neuquén", -38.952, -68.060)
+        //    );
+        //}
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Attraction>().HasData(
-                new PointOfInterest("Monumento a San Martín", "Monumento al General San Martín", -38.9517, -68.0592),
-                new PointOfInterest("Museo Nacional", "Museo en Neuquén", -38.952, -68.060)
-            );
+            modelBuilder.Entity<PointOfInterest>()
+                .HasDiscriminator<string>("Discriminator")
+                .HasValue<Attraction>("Attraction")
+                .HasValue<Event>("Event");
+
+            base.OnModelCreating(modelBuilder);
         }
     }
 }

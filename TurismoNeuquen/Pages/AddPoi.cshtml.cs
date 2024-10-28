@@ -15,7 +15,7 @@ namespace TurismoNeuquen.Pages
         }
 
         [BindProperty]
-        public PointOfInterest PointOfInterest { get; set; }
+        public Attraction Attraction { get; set; }
         public void OnGet()
         {
         }
@@ -26,7 +26,7 @@ namespace TurismoNeuquen.Pages
                 return Page();
             }
 
-            _poiService.CreatePOI(PointOfInterest);
+            _poiService.CreatePOIAtt(Attraction);
             return RedirectToPage("Index");
         }
     }

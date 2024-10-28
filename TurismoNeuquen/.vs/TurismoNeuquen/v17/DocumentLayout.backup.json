@@ -1,22 +1,50 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\valen\\OneDrive\\Escritorio\\Bony\\Di tella\\ARQ_WEB\\ARQ_WEB_TP\\TurismoNeuquen\\",
+  "WorkspaceRootPath": "C:\\Users\\lucas\\Documents\\UTDT\\ARQ\\ARQ_WEB_TP\\TurismoNeuquen\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E1998EF6-6D6B-4F92-8F98-6D43F232EAD8}|TurismoNeuquen.csproj|c:\\users\\valen\\onedrive\\escritorio\\bony\\di tella\\arq_web\\arq_web_tp\\turismoneuquen\\services\\iadminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E1998EF6-6D6B-4F92-8F98-6D43F232EAD8}|TurismoNeuquen.csproj|solutionrelative:services\\iadminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E1998EF6-6D6B-4F92-8F98-6D43F232EAD8}|TurismoNeuquen.csproj|c:\\users\\lucas\\documents\\utdt\\arq\\arq_web_tp\\turismoneuquen\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{E1998EF6-6D6B-4F92-8F98-6D43F232EAD8}|TurismoNeuquen.csproj|solutionrelative:css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E1998EF6-6D6B-4F92-8F98-6D43F232EAD8}|TurismoNeuquen.csproj|c:\\users\\valen\\onedrive\\escritorio\\bony\\di tella\\arq_web\\arq_web_tp\\turismoneuquen\\services\\poiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E1998EF6-6D6B-4F92-8F98-6D43F232EAD8}|TurismoNeuquen.csproj|c:\\users\\lucas\\documents\\utdt\\arq\\arq_web_tp\\turismoneuquen\\data\\poicontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1998EF6-6D6B-4F92-8F98-6D43F232EAD8}|TurismoNeuquen.csproj|solutionrelative:data\\poicontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1998EF6-6D6B-4F92-8F98-6D43F232EAD8}|TurismoNeuquen.csproj|c:\\users\\lucas\\documents\\utdt\\arq\\arq_web_tp\\turismoneuquen\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1998EF6-6D6B-4F92-8F98-6D43F232EAD8}|TurismoNeuquen.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1998EF6-6D6B-4F92-8F98-6D43F232EAD8}|TurismoNeuquen.csproj|c:\\users\\lucas\\documents\\utdt\\arq\\arq_web_tp\\turismoneuquen\\services\\poiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E1998EF6-6D6B-4F92-8F98-6D43F232EAD8}|TurismoNeuquen.csproj|solutionrelative:services\\poiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E1998EF6-6D6B-4F92-8F98-6D43F232EAD8}|TurismoNeuquen.csproj|c:\\users\\valen\\onedrive\\escritorio\\bony\\di tella\\arq_web\\arq_web_tp\\turismoneuquen\\pages\\admin.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E1998EF6-6D6B-4F92-8F98-6D43F232EAD8}|TurismoNeuquen.csproj|solutionrelative:pages\\admin.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E1998EF6-6D6B-4F92-8F98-6D43F232EAD8}|TurismoNeuquen.csproj|c:\\users\\lucas\\documents\\utdt\\arq\\arq_web_tp\\turismoneuquen\\models\\pointofinterest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1998EF6-6D6B-4F92-8F98-6D43F232EAD8}|TurismoNeuquen.csproj|solutionrelative:models\\pointofinterest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E1998EF6-6D6B-4F92-8F98-6D43F232EAD8}|TurismoNeuquen.csproj|c:\\users\\valen\\onedrive\\escritorio\\bony\\di tella\\arq_web\\arq_web_tp\\turismoneuquen\\pages\\admin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E1998EF6-6D6B-4F92-8F98-6D43F232EAD8}|TurismoNeuquen.csproj|solutionrelative:pages\\admin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E1998EF6-6D6B-4F92-8F98-6D43F232EAD8}|TurismoNeuquen.csproj|c:\\users\\lucas\\documents\\utdt\\arq\\arq_web_tp\\turismoneuquen\\models\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1998EF6-6D6B-4F92-8F98-6D43F232EAD8}|TurismoNeuquen.csproj|solutionrelative:models\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1998EF6-6D6B-4F92-8F98-6D43F232EAD8}|TurismoNeuquen.csproj|c:\\users\\lucas\\documents\\utdt\\arq\\arq_web_tp\\turismoneuquen\\models\\attraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1998EF6-6D6B-4F92-8F98-6D43F232EAD8}|TurismoNeuquen.csproj|solutionrelative:models\\attraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1998EF6-6D6B-4F92-8F98-6D43F232EAD8}|TurismoNeuquen.csproj|c:\\users\\lucas\\documents\\utdt\\arq\\arq_web_tp\\turismoneuquen\\services\\ipoiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1998EF6-6D6B-4F92-8F98-6D43F232EAD8}|TurismoNeuquen.csproj|solutionrelative:services\\ipoiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1998EF6-6D6B-4F92-8F98-6D43F232EAD8}|TurismoNeuquen.csproj|c:\\users\\lucas\\documents\\utdt\\arq\\arq_web_tp\\turismoneuquen\\pages\\addpoi.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1998EF6-6D6B-4F92-8F98-6D43F232EAD8}|TurismoNeuquen.csproj|solutionrelative:pages\\addpoi.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1998EF6-6D6B-4F92-8F98-6D43F232EAD8}|TurismoNeuquen.csproj|c:\\users\\lucas\\documents\\utdt\\arq\\arq_web_tp\\turismoneuquen\\services\\iadminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1998EF6-6D6B-4F92-8F98-6D43F232EAD8}|TurismoNeuquen.csproj|solutionrelative:services\\iadminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1998EF6-6D6B-4F92-8F98-6D43F232EAD8}|TurismoNeuquen.csproj|c:\\users\\lucas\\documents\\utdt\\arq\\arq_web_tp\\turismoneuquen\\pages\\admin.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1998EF6-6D6B-4F92-8F98-6D43F232EAD8}|TurismoNeuquen.csproj|solutionrelative:pages\\admin.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,62 +54,161 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "IAdminService.cs",
-              "DocumentMoniker": "C:\\Users\\valen\\OneDrive\\Escritorio\\Bony\\Di tella\\ARQ_WEB\\ARQ_WEB_TP\\TurismoNeuquen\\Services\\IAdminService.cs",
-              "RelativeDocumentMoniker": "Services\\IAdminService.cs",
-              "ToolTip": "C:\\Users\\valen\\OneDrive\\Escritorio\\Bony\\Di tella\\ARQ_WEB\\ARQ_WEB_TP\\TurismoNeuquen\\Services\\IAdminService.cs",
-              "RelativeToolTip": "Services\\IAdminService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-27T19:39:28.367Z",
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\lucas\\Documents\\UTDT\\ARQ\\ARQ_WEB_TP\\TurismoNeuquen\\CSS\\site.css",
+              "RelativeDocumentMoniker": "CSS\\site.css",
+              "ToolTip": "C:\\Users\\lucas\\Documents\\UTDT\\ARQ\\ARQ_WEB_TP\\TurismoNeuquen\\CSS\\site.css*",
+              "RelativeToolTip": "CSS\\site.css*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-10-28T02:26:20.702Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "PoiContext.cs",
+              "DocumentMoniker": "C:\\Users\\lucas\\Documents\\UTDT\\ARQ\\ARQ_WEB_TP\\TurismoNeuquen\\Data\\PoiContext.cs",
+              "RelativeDocumentMoniker": "Data\\PoiContext.cs",
+              "ToolTip": "C:\\Users\\lucas\\Documents\\UTDT\\ARQ\\ARQ_WEB_TP\\TurismoNeuquen\\Data\\PoiContext.cs",
+              "RelativeToolTip": "Data\\PoiContext.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAiwBUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T22:48:42.905Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PointOfInterest.cs",
+              "DocumentMoniker": "C:\\Users\\lucas\\Documents\\UTDT\\ARQ\\ARQ_WEB_TP\\TurismoNeuquen\\Models\\PointOfInterest.cs",
+              "RelativeDocumentMoniker": "Models\\PointOfInterest.cs",
+              "ToolTip": "C:\\Users\\lucas\\Documents\\UTDT\\ARQ\\ARQ_WEB_TP\\TurismoNeuquen\\Models\\PointOfInterest.cs",
+              "RelativeToolTip": "Models\\PointOfInterest.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T22:42:58.817Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "PoiService.cs",
-              "DocumentMoniker": "C:\\Users\\valen\\OneDrive\\Escritorio\\Bony\\Di tella\\ARQ_WEB\\ARQ_WEB_TP\\TurismoNeuquen\\Services\\PoiService.cs",
+              "DocumentMoniker": "C:\\Users\\lucas\\Documents\\UTDT\\ARQ\\ARQ_WEB_TP\\TurismoNeuquen\\Services\\PoiService.cs",
               "RelativeDocumentMoniker": "Services\\PoiService.cs",
-              "ToolTip": "C:\\Users\\valen\\OneDrive\\Escritorio\\Bony\\Di tella\\ARQ_WEB\\ARQ_WEB_TP\\TurismoNeuquen\\Services\\PoiService.cs",
+              "ToolTip": "C:\\Users\\lucas\\Documents\\UTDT\\ARQ\\ARQ_WEB_TP\\TurismoNeuquen\\Services\\PoiService.cs",
               "RelativeToolTip": "Services\\PoiService.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAAALAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-27T19:33:44.084Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Admin.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\valen\\OneDrive\\Escritorio\\Bony\\Di tella\\ARQ_WEB\\ARQ_WEB_TP\\TurismoNeuquen\\Pages\\Admin.cshtml.cs",
-              "RelativeDocumentMoniker": "Pages\\Admin.cshtml.cs",
-              "ToolTip": "C:\\Users\\valen\\OneDrive\\Escritorio\\Bony\\Di tella\\ARQ_WEB\\ARQ_WEB_TP\\TurismoNeuquen\\Pages\\Admin.cshtml.cs",
-              "RelativeToolTip": "Pages\\Admin.cshtml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAApAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "Attraction.cs",
+              "DocumentMoniker": "C:\\Users\\lucas\\Documents\\UTDT\\ARQ\\ARQ_WEB_TP\\TurismoNeuquen\\Models\\Attraction.cs",
+              "RelativeDocumentMoniker": "Models\\Attraction.cs",
+              "ToolTip": "C:\\Users\\lucas\\Documents\\UTDT\\ARQ\\ARQ_WEB_TP\\TurismoNeuquen\\Models\\Attraction.cs",
+              "RelativeToolTip": "Models\\Attraction.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-27T19:22:04.965Z",
+              "WhenOpened": "2024-10-27T23:03:18.019Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Admin.cshtml",
-              "DocumentMoniker": "C:\\Users\\valen\\OneDrive\\Escritorio\\Bony\\Di tella\\ARQ_WEB\\ARQ_WEB_TP\\TurismoNeuquen\\Pages\\Admin.cshtml",
-              "RelativeDocumentMoniker": "Pages\\Admin.cshtml",
-              "ToolTip": "C:\\Users\\valen\\OneDrive\\Escritorio\\Bony\\Di tella\\ARQ_WEB\\ARQ_WEB_TP\\TurismoNeuquen\\Pages\\Admin.cshtml",
-              "RelativeToolTip": "Pages\\Admin.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-27T19:21:10.009Z",
+              "DocumentIndex": 7,
+              "Title": "IPoiService.cs",
+              "DocumentMoniker": "C:\\Users\\lucas\\Documents\\UTDT\\ARQ\\ARQ_WEB_TP\\TurismoNeuquen\\Services\\IPoiService.cs",
+              "RelativeDocumentMoniker": "Services\\IPoiService.cs",
+              "ToolTip": "C:\\Users\\lucas\\Documents\\UTDT\\ARQ\\ARQ_WEB_TP\\TurismoNeuquen\\Services\\IPoiService.cs",
+              "RelativeToolTip": "Services\\IPoiService.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAA1wAwAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T22:58:47.271Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AddPoi.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\lucas\\Documents\\UTDT\\ARQ\\ARQ_WEB_TP\\TurismoNeuquen\\Pages\\AddPoi.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\AddPoi.cshtml.cs",
+              "ToolTip": "C:\\Users\\lucas\\Documents\\UTDT\\ARQ\\ARQ_WEB_TP\\TurismoNeuquen\\Pages\\AddPoi.cshtml.cs",
+              "RelativeToolTip": "Pages\\AddPoi.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T22:59:52.409Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\lucas\\Documents\\UTDT\\ARQ\\ARQ_WEB_TP\\TurismoNeuquen\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\lucas\\Documents\\UTDT\\ARQ\\ARQ_WEB_TP\\TurismoNeuquen\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAQwBcAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T22:46:02.508Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Event.cs",
+              "DocumentMoniker": "C:\\Users\\lucas\\Documents\\UTDT\\ARQ\\ARQ_WEB_TP\\TurismoNeuquen\\Models\\Event.cs",
+              "RelativeDocumentMoniker": "Models\\Event.cs",
+              "ToolTip": "C:\\Users\\lucas\\Documents\\UTDT\\ARQ\\ARQ_WEB_TP\\TurismoNeuquen\\Models\\Event.cs",
+              "RelativeToolTip": "Models\\Event.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T02:07:50.248Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IAdminService.cs",
+              "DocumentMoniker": "C:\\Users\\lucas\\Documents\\UTDT\\ARQ\\ARQ_WEB_TP\\TurismoNeuquen\\Services\\IAdminService.cs",
+              "RelativeDocumentMoniker": "Services\\IAdminService.cs",
+              "ToolTip": "C:\\Users\\lucas\\Documents\\UTDT\\ARQ\\ARQ_WEB_TP\\TurismoNeuquen\\Services\\IAdminService.cs",
+              "RelativeToolTip": "Services\\IAdminService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T19:39:28.367Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Admin.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\lucas\\Documents\\UTDT\\ARQ\\ARQ_WEB_TP\\TurismoNeuquen\\Pages\\Admin.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\Admin.cshtml.cs",
+              "ToolTip": "C:\\Users\\lucas\\Documents\\UTDT\\ARQ\\ARQ_WEB_TP\\TurismoNeuquen\\Pages\\Admin.cshtml.cs",
+              "RelativeToolTip": "Pages\\Admin.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T19:22:04.965Z",
               "EditorCaption": ""
             }
           ]

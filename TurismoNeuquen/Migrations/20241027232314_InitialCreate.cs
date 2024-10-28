@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
@@ -20,7 +21,13 @@ namespace TurismoNeuquen.Migrations
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Latitude = table.Column<double>(type: "float", nullable: false),
                     Longitude = table.Column<double>(type: "float", nullable: false),
-                    State = table.Column<bool>(type: "bit", nullable: false)
+                    State = table.Column<bool>(type: "bit", nullable: false),
+                    Discriminator = table.Column<string>(type: "nvarchar(21)", maxLength: 21, nullable: false),
+                    OpenDays = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    OpeningTime = table.Column<TimeOnly>(type: "time", nullable: true),
+                    ClosingTime = table.Column<TimeOnly>(type: "time", nullable: true),
+                    EventDate = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    Location = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {

@@ -9,59 +9,59 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = TurismoNeuquen
 build_property.RootNamespace = TurismoNeuquen
-build_property.ProjectDir = C:\Users\valen\OneDrive\Escritorio\Bony\Di tella\ARQ_WEB\ARQ_WEB_TP\TurismoNeuquen\
+build_property.ProjectDir = C:\Users\lucas\Documents\UTDT\ARQ\ARQ_WEB_TP\TurismoNeuquen\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\valen\OneDrive\Escritorio\Bony\Di tella\ARQ_WEB\ARQ_WEB_TP\TurismoNeuquen
+build_property.MSBuildProjectDirectory = C:\Users\lucas\Documents\UTDT\ARQ\ARQ_WEB_TP\TurismoNeuquen
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/valen/OneDrive/Escritorio/Bony/Di tella/ARQ_WEB/ARQ_WEB_TP/TurismoNeuquen/Pages/AddAttraction.cshtml]
+[C:/Users/lucas/Documents/UTDT/ARQ/ARQ_WEB_TP/TurismoNeuquen/Pages/AddAttraction.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkQXR0cmFjdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/valen/OneDrive/Escritorio/Bony/Di tella/ARQ_WEB/ARQ_WEB_TP/TurismoNeuquen/Pages/AddPoi.cshtml]
+[C:/Users/lucas/Documents/UTDT/ARQ/ARQ_WEB_TP/TurismoNeuquen/Pages/AddPoi.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkUG9pLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/valen/OneDrive/Escritorio/Bony/Di tella/ARQ_WEB/ARQ_WEB_TP/TurismoNeuquen/Pages/Admin.cshtml]
+[C:/Users/lucas/Documents/UTDT/ARQ/ARQ_WEB_TP/TurismoNeuquen/Pages/Admin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/valen/OneDrive/Escritorio/Bony/Di tella/ARQ_WEB/ARQ_WEB_TP/TurismoNeuquen/Pages/DetailsPoi.cshtml]
+[C:/Users/lucas/Documents/UTDT/ARQ/ARQ_WEB_TP/TurismoNeuquen/Pages/DetailsPoi.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGV0YWlsc1BvaS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/valen/OneDrive/Escritorio/Bony/Di tella/ARQ_WEB/ARQ_WEB_TP/TurismoNeuquen/Pages/Error.cshtml]
+[C:/Users/lucas/Documents/UTDT/ARQ/ARQ_WEB_TP/TurismoNeuquen/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/valen/OneDrive/Escritorio/Bony/Di tella/ARQ_WEB/ARQ_WEB_TP/TurismoNeuquen/Pages/Index.cshtml]
+[C:/Users/lucas/Documents/UTDT/ARQ/ARQ_WEB_TP/TurismoNeuquen/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/valen/OneDrive/Escritorio/Bony/Di tella/ARQ_WEB/ARQ_WEB_TP/TurismoNeuquen/Pages/Pois.cshtml]
+[C:/Users/lucas/Documents/UTDT/ARQ/ARQ_WEB_TP/TurismoNeuquen/Pages/Pois.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUG9pcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/valen/OneDrive/Escritorio/Bony/Di tella/ARQ_WEB/ARQ_WEB_TP/TurismoNeuquen/Pages/Privacy.cshtml]
+[C:/Users/lucas/Documents/UTDT/ARQ/ARQ_WEB_TP/TurismoNeuquen/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/valen/OneDrive/Escritorio/Bony/Di tella/ARQ_WEB/ARQ_WEB_TP/TurismoNeuquen/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/lucas/Documents/UTDT/ARQ/ARQ_WEB_TP/TurismoNeuquen/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/valen/OneDrive/Escritorio/Bony/Di tella/ARQ_WEB/ARQ_WEB_TP/TurismoNeuquen/Pages/_ViewImports.cshtml]
+[C:/Users/lucas/Documents/UTDT/ARQ/ARQ_WEB_TP/TurismoNeuquen/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/valen/OneDrive/Escritorio/Bony/Di tella/ARQ_WEB/ARQ_WEB_TP/TurismoNeuquen/Pages/_ViewStart.cshtml]
+[C:/Users/lucas/Documents/UTDT/ARQ/ARQ_WEB_TP/TurismoNeuquen/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/valen/OneDrive/Escritorio/Bony/Di tella/ARQ_WEB/ARQ_WEB_TP/TurismoNeuquen/Pages/Shared/_Layout.cshtml]
+[C:/Users/lucas/Documents/UTDT/ARQ/ARQ_WEB_TP/TurismoNeuquen/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-zhl949dpzt
