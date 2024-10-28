@@ -38,12 +38,24 @@ namespace TurismoNeuquen.Services
                 throw new Exception("Point of Interest not found.");
             }
         }
-
-
-        public void DeletePOI(PointOfInterest poi)
+        public void DeletePOI(int poiId)
         {
-            _poiContext.Remove(poi);
-            _poiContext.SaveChanges();
+            // Find the PointOfInterest in the database using the ID
+            var poiToDelete = _poiContext.PointsOfInterest.Find(poiId);
+
+            if (poiToDelete != null)
+            {
+                // Remove the object from the context
+                _poiContext.PointsOfInterest.Remove(poiToDelete);
+
+                // Save changes to commit the deletion
+                _poiContext.SaveChanges();
+            }
+            else
+            {
+                throw new Exception("Point of Interest not found.");
+            }
         }
+
     }
 }

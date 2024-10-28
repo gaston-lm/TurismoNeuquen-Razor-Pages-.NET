@@ -6,6 +6,6 @@ namespace TurismoNeuquen.Services
     {
         IEnumerable<PointOfInterest> GetPOIs();
         void Confirm(int poiId);
-        void DeletePOI(PointOfInterest poi);
+        void DeletePOI(int poiId);
     }
 }
