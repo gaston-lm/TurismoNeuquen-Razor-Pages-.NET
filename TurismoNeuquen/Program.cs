@@ -44,6 +44,10 @@ builder.Services.AddDbContext<PoiContext>(options =>
     options.UseSqlServer(connection);
 });
 
+
+// Register the service AdminService
+builder.Services.AddScoped<AdminService>();
+
 // Registrar el servicio IPoiService
 builder.Services.AddScoped<IPoiService, PoiService>();
 

@@ -17,7 +17,7 @@ namespace TurismoNeuquen.Services
 
         public IEnumerable<PointOfInterest> GetPOIs()
         {
-            yield return _poiContext.PointsOfInterest.SingleOrDefault(x => x.State == false);
+            return _poiContext.PointsOfInterest.Where(x => x.State == false);
         }
 
         public void Confirm(int poiId)
