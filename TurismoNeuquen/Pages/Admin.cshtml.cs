@@ -2,8 +2,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using TurismoNeuquen.Models;
 using TurismoNeuquen.Services;
+using Microsoft.Extensions.Logging;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace TurismoNeuquen.Pages
 {
@@ -32,21 +32,16 @@ namespace TurismoNeuquen.Pages
             }
         }
 
-        public async Task<IActionResult> OnPostConfirmAsync(int id)
+        public IActionResult OnPostConfirm(int id)
         {
-            try
-            {
-                _adminService.Confirm(id);
-                _logger.LogInformation($"POI with ID {id} has been confirmed.");
+            _adminService.Confirm(id);
+            return RedirectToPage();
+        }
 
-                Pois = _adminService.GetPOIs(); // Refresh list
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError("Error confirming POI.", ex);
-            }
-
-            return Page();
+        public IActionResult OnPostDelete(int id)
+        {
+            _adminService.DeletePOI(id);
+            return RedirectToPage();
         }
     }
 }
