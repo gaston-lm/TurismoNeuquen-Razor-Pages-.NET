@@ -5,7 +5,7 @@ namespace TurismoNeuquen.Services
     public interface IAdminService
     {
         IEnumerable<PointOfInterest> GetPOIs();
-        void UpdatePOI(PointOfInterest poi);
+        void Confirm(int poiId);
         void DeletePOI(PointOfInterest poi);
     }
 }

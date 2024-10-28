@@ -20,11 +20,25 @@ namespace TurismoNeuquen.Services
             yield return _poiContext.PointsOfInterest.SingleOrDefault(x => x.State == false);
         }
 
-        public void UpdatePOI(PointOfInterest poi)
+        public void Confirm(int poiId)
         {
-            _poiContext.Update(poi);
-            _poiContext.SaveChanges();
+            // Retrieve the existing PointOfInterest from the database using the ID
+            var existingPOI = _poiContext.PointsOfInterest.Find(poiId);
+
+            if (existingPOI != null)
+            {
+                // Update the properties you want to change
+                existingPOI.State = true;
+
+                // Save the changes to the database
+                _poiContext.SaveChanges();
+            }
+            else
+            {
+                throw new Exception("Point of Interest not found.");
+            }
         }
+
 
         public void DeletePOI(PointOfInterest poi)
         {
