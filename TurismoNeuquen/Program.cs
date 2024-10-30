@@ -42,6 +42,8 @@ builder.Services.AddDbContext<PoiContext>(options =>
 {
     //options.UseInMemoryDatabase("bookTestDb");
     options.UseSqlServer(connection);
+
+    //Agregar retry
 });
 
 

@@ -23,7 +23,7 @@ namespace TurismoNeuquen.Services
 
         public IEnumerable<PointOfInterest> GetPOIs()
         {
-            return _poiContext.PointsOfInterest;
+            return _poiContext.PointsOfInterest.Where(x => x.State == true);
         }
 
         public void UpdatePOI(PointOfInterest poi)
