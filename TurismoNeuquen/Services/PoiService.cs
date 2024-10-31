@@ -42,5 +42,10 @@ namespace TurismoNeuquen.Services
             _poiContext.Add(att);
             _poiContext.SaveChanges();
         }
+        public void CreatePOIEvent(Event eve)
+        {
+            _poiContext.Add(eve);
+            _poiContext.SaveChanges();
+        }
     }
 }

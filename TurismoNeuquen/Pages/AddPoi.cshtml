@@ -2,10 +2,53 @@
 @model TurismoNeuquen.Pages.AddPoiModel
 <h1>Añadir Poi</h1>
 
-    <form method="post">
-        <input type="text" name="name" placeholder="Nombre" required />
-        <input type="text" name="description" placeholder="Descripción" required />
-        <input type="text" step="any" name="latitude" placeholder="Latitud" required />
-        <input type="text" step="any" name="longitude" placeholder="Longitud" required />
+<form method="post">
+    <input type="text" name="name" placeholder="Nombre" required />
+    <input type="text" name="description" placeholder="Descripción" required />
+    <input type="text" step="any" name="latitude" placeholder="Latitud" required />
+    <input type="text" step="any" name="longitude" placeholder="Longitud" required />
+<button type="submit">Añadir</button>
+</form>
+
+@* 
+<form method="post">
+    <!-- Type selection -->
+    <label for="poiType">Tipo de POI:</label>
+    <select id="poiType" name="poiType" onchange="showFields()">
+        <option value="attraction">Atracción</option>
+        <option value="event">Evento</option>
+    </select>
+
+    <!-- Common fields -->
+    <input type="text" name="name" placeholder="Nombre" required />
+    <input type="text" name="description" placeholder="Descripción" required />
+    <input type="text" step="any" name="latitude" placeholder="Latitud" required />
+    <input type="text" step="any" name="longitude" placeholder="Longitud" required />
+
+    <!-- Attraction-specific fields -->
+    <div id="attractionFields" style="display: none;">
+        <input type="text" name="OpenDays" placeholder="Días de apertura" />
+        <input type="time" name="OpeningTime" placeholder="Hora de apertura" />
+        <input type="time" name="ClosingTime" placeholder="Hora de cierre" />
+    </div>
+
+    <!-- Event-specific fields -->
+    <div id="eventFields" style="display: none;">
+        <input type="datetime-local" name="EventDate" placeholder="Fecha del evento" />
+        <input type="text" name="Location" placeholder="Ubicación" />
+    </div>
+
     <button type="submit">Añadir</button>
-    </form>
+</form>
+
+<script>
+    function showFields() {
+        const poiType = document.getElementById("poiType").value;
+        document.getElementById("attractionFields").style.display = poiType === "attraction" ? "block" : "none";
+        document.getElementById("eventFields").style.display = poiType === "event" ? "block" : "none";
+    }
+
+    // Initial call to set the correct fields when the page loads
+    showFields();
+</script>
+ *@
