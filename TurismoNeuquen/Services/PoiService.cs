@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using TurismoNeuquen.Data;
@@ -37,15 +38,28 @@ namespace TurismoNeuquen.Services
             _poiContext.Remove(poi);
             _poiContext.SaveChanges();
         }
-        public void CreatePOIAtt(Attraction att)
+
+        public void AddPoi(string poiType, string name, string description, double latitude, double longitude, DateTime? eventDate = null, string? location = null, List<string>? openDays = null, TimeOnly? openingTime = null, TimeOnly? closingTime = null)
         {
-            _poiContext.Add(att);
+            PointOfInterest poi;
+
+            if (poiType == "attraction")
+            {
+                poi = Attraction.Create(name, description, latitude, longitude, openDays, openingTime, closingTime);
+            }
+            else if (poiType == "event" && eventDate.HasValue && location != null)
+            {
+                poi = Event.Create(name, description, latitude, longitude, eventDate.Value, location);
+            }
+            else
+            {
+                throw new ArgumentException("Invalid POI type or missing required fields for the type");
+            }
+
+            _poiContext.PointsOfInterest.Add(poi);
             _poiContext.SaveChanges();
         }
-        public void CreatePOIEvent(Event eve)
-        {
-            _poiContext.Add(eve);
-            _poiContext.SaveChanges();
-        }
+
+
     }
 }

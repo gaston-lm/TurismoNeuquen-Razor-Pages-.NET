@@ -14,20 +14,26 @@ namespace TurismoNeuquen.Pages
             _poiService = poiService;
         }
 
-        [BindProperty]
-        public Attraction Attraction { get; set; }
-        public void OnGet()
-        {
-        }
-        public IActionResult OnPost()
-        {
-            if (!ModelState.IsValid)
-            {
-                return Page();
-            }
+        [BindProperty] public string PoiType { get; set; }
+        [BindProperty] public string Name { get; set; }
+        [BindProperty] public string Description { get; set; }
+        [BindProperty] public double Latitude { get; set; }
+        [BindProperty] public double Longitude { get; set; }
 
-            _poiService.CreatePOIAtt(Attraction);
-            return RedirectToPage("Index");
+        // Fields specific to Event
+        [BindProperty] public DateTime? EventDate { get; set; }
+        [BindProperty] public string? Location { get; set; }
+
+        // Fields specific to Attraction
+        [BindProperty] public List<string>? OpenDays { get; set; }
+        [BindProperty] public TimeOnly? OpeningTime { get; set; }
+        [BindProperty] public TimeOnly? ClosingTime { get; set; }
+
+        public IActionResult OnPostAddPOI()
+        {
+            _poiService.AddPoi(PoiType, Name, Description, Latitude, Longitude, EventDate, Location, OpenDays, OpeningTime, ClosingTime);
+
+            return RedirectToPage("/Index"); // Redirect to a success page or another appropriate action
         }
     }
 }

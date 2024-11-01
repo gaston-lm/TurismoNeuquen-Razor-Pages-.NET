@@ -2,17 +2,7 @@
 @model TurismoNeuquen.Pages.AddPoiModel
 <h1>Añadir Poi</h1>
 
-<form method="post">
-    <input type="text" name="name" placeholder="Nombre" required />
-    <input type="text" name="description" placeholder="Descripción" required />
-    <input type="text" step="any" name="latitude" placeholder="Latitud" required />
-    <input type="text" step="any" name="longitude" placeholder="Longitud" required />
-<button type="submit">Añadir</button>
-</form>
-
-@* 
-<form method="post">
-    <!-- Type selection -->
+<form method="post" asp-page-handler="AddPOI">
     <label for="poiType">Tipo de POI:</label>
     <select id="poiType" name="poiType" onchange="showFields()">
         <option value="attraction">Atracción</option>
@@ -20,10 +10,10 @@
     </select>
 
     <!-- Common fields -->
-    <input type="text" name="name" placeholder="Nombre" required />
-    <input type="text" name="description" placeholder="Descripción" required />
-    <input type="text" step="any" name="latitude" placeholder="Latitud" required />
-    <input type="text" step="any" name="longitude" placeholder="Longitud" required />
+    <input type="text" name="Name" placeholder="Nombre" required />
+    <input type="text" name="Description" placeholder="Descripción" required />
+    <input type="text" step="any" name="Latitude" placeholder="Latitud" required />
+    <input type="text" step="any" name="Longitude" placeholder="Longitud" required />
 
     <!-- Attraction-specific fields -->
     <div id="attractionFields" style="display: none;">
@@ -51,4 +41,3 @@
     // Initial call to set the correct fields when the page loads
     showFields();
 </script>
- *@
