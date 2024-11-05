@@ -1,66 +1,169 @@
 ﻿@page
 @model TurismoNeuquen.Pages.AddPoiModel
-<h1>Añadir Poi</h1>
 
-<form method="post" asp-page-handler="AddPOI">
-    <label for="poiType">Tipo de POI:</label>
-    <select id="poiType" name="poiType" onchange="showFields()">
-        <option value="attraction">Atracción</option>
-        <option value="event">Evento</option>
-    </select>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <form method="post" asp-page-handler="AddPOI" class="p-4 border rounded bg-light">
+                <div class="mb-3">
+                    <div class="btn-group" role="group" aria-label="POI Type">
+                        <input type="radio" class="btn-check" name="poiType" id="optionAttraction" value="attraction" autocomplete="off" checked onchange="showFields()">
+                        <label class="btn btn-outline-secondary" for="optionAttraction">Atracción</label>
 
-    <!-- Common fields -->
-    <input type="text" name="Name" placeholder="Nombre" required />
-    <input type="text" name="Description" placeholder="Descripción" required />
-    <input type="text" step="any" name="Latitude" placeholder="Latitud" required />
-    <input type="text" step="any" name="Longitude" placeholder="Longitud" required />
+                        <input type="radio" class="btn-check" name="poiType" id="optionEvent" value="event" autocomplete="off" onchange="showFields()">
+                        <label class="btn btn-outline-secondary" for="optionEvent">Evento</label>
+                    </div>
+                </div>
 
-    <!-- Attraction-specific fields -->
-    <div id="attractionFields" style="display: none;">
-        <fieldset>
-            <legend>Días de apertura:</legend>
-            <label>
-                <input type="checkbox" class="dayCheckbox" value="0" onchange="updateOpenDays()" /> Lunes
-            </label>
-            <label>
-                <input type="checkbox" class="dayCheckbox" value="1" onchange="updateOpenDays()" /> Martes
-            </label>
-            <label>
-                <input type="checkbox" class="dayCheckbox" value="2" onchange="updateOpenDays()" /> Miércoles
-            </label>
-            <label>
-                <input type="checkbox" class="dayCheckbox" value="3" onchange="updateOpenDays()" /> Jueves
-            </label>
-            <label>
-                <input type="checkbox" class="dayCheckbox" value="4" onchange="updateOpenDays()" /> Viernes
-            </label>
-            <label>
-                <input type="checkbox" class="dayCheckbox" value="5" onchange="updateOpenDays()" /> Sábado
-            </label>
-            <label>
-                <input type="checkbox" class="dayCheckbox" value="6" onchange="updateOpenDays()" /> Domingo
-            </label>
-        </fieldset>
-        <input type="hidden" name="OpenDays" id="OpenDays" />
-        <input type="time" name="OpeningTime" placeholder="Hora de apertura" required />
-        <input type="time" name="ClosingTime" placeholder="Hora de cierre" required />
+                <!-- Common fields -->
+                <div class="mb-3">
+                    <input type="text" name="Name" class="form-control" placeholder="Nombre" required />
+                </div>
+                <div class="mb-3">
+                    <input type="text" name="Description" class="form-control" placeholder="Descripción" required />
+                </div>
+                <div class="mb-3">
+                    <input type="text" step="any" name="Latitude" class="form-control" placeholder="Latitud" required />
+                </div>
+                <div class="mb-3">
+                    <input type="text" step="any" name="Longitude" class="form-control" placeholder="Longitud" required />
+                </div>
+
+                <!-- Attraction-specific fields -->
+                <div id="attractionFields" style="display: block;">
+                    <fieldset class="border p-3 mb-3">
+                        <legend class="float-none w-auto px-2">Días de apertura:</legend>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input dayCheckbox" value="0" onchange="updateOpenDays()" />
+                            <label class="form-check-label">Lunes</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input dayCheckbox" value="1" onchange="updateOpenDays()" />
+                            <label class="form-check-label">Martes</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input dayCheckbox" value="2" onchange="updateOpenDays()" />
+                            <label class="form-check-label">Miércoles</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input dayCheckbox" value="3" onchange="updateOpenDays()" />
+                            <label class="form-check-label">Jueves</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input dayCheckbox" value="4" onchange="updateOpenDays()" />
+                            <label class="form-check-label">Viernes</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input dayCheckbox" value="5" onchange="updateOpenDays()" />
+                            <label class="form-check-label">Sábado</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input dayCheckbox" value="6" onchange="updateOpenDays()" />
+                            <label class="form-check-label">Domingo</label>
+                        </div>
+                    </fieldset>
+                    <input type="hidden" name="OpenDays" id="OpenDays" />
+                    <div class="mb-3">
+                        <input type="time" name="OpeningTime" class="form-control" required />
+                    </div>
+                    <div class="mb-3">
+                        <input type="time" name="ClosingTime" class="form-control" required />
+                    </div>
+                </div>
+
+                <!-- Event-specific fields -->
+                <div id="eventFields" style="display: none;">
+                    <div class="mb-3">
+                        <input type="datetime-local" name="EventDate" class="form-control" placeholder="Fecha del evento" required />
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" name="Location" class="form-control" placeholder="Ubicación" required />
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-secondary">Enviar solicitud</button>
+            </form>
+        </div>
     </div>
-
-    <!-- Event-specific fields -->
-    <div id="eventFields" style="display: none;">
-        <input type="datetime-local" name="EventDate" placeholder="Fecha del evento" />
-        <input type="text" name="Location" placeholder="Ubicación" />
-    </div>
-
-    <button type="submit">Añadir</button>
-</form>
+</div>
 
 <script>
     function showFields() {
-        const poiType = document.getElementById("poiType").value;
-        document.getElementById("attractionFields").style.display = poiType === "attraction" ? "block" : "none";
-        document.getElementById("eventFields").style.display = poiType === "event" ? "block" : "none";
+        // Get the radio button elements
+        const attractionRadio = document.getElementById("optionAttraction");
+        const eventRadio = document.getElementById("optionEvent");
+
+        // Get the fieldsets for attraction and event
+        const attractionFields = document.getElementById("attractionFields");
+        const eventFields = document.getElementById("eventFields");
+
+        // Check if radio buttons are checked and show/hide fields accordingly
+        if (attractionRadio.checked) {
+            attractionFields.style.display = "block";
+            eventFields.style.display = "none";
+            clearEventFields(); // Clear event fields if switching to attraction
+
+            // Set required fields for attraction
+            setRequiredFields(attractionFields, true);
+            setRequiredFields(eventFields, false);
+        } else if (eventRadio.checked) {
+            attractionFields.style.display = "none";
+            eventFields.style.display = "block";
+            clearAttractionFields(); // Clear attraction fields if switching to event
+
+            // Set required fields for event
+            setRequiredFields(attractionFields, false);
+            setRequiredFields(eventFields, true);
+        }
     }
+
+    function setRequiredFields(container, isRequired) {
+        const inputs = container.querySelectorAll('input[required]');
+        inputs.forEach(input => {
+            if (isRequired) {
+                input.setAttribute('required', 'required'); // Set required
+            } else {
+                input.removeAttribute('required'); // Remove required
+            }
+        });
+    }
+
+    function clearEventFields() {
+        const eventDateInput = document.querySelector('input[name="EventDate"]');
+        const locationInput = document.querySelector('input[name="Location"]');
+
+        if (eventDateInput) {
+            eventDateInput.value = ""; // Clear value
+        }
+        if (locationInput) {
+            locationInput.value = ""; // Clear value
+        }
+    }
+
+    function clearAttractionFields() {
+        const openingTimeInput = document.querySelector('input[name="OpeningTime"]');
+        const closingTimeInput = document.querySelector('input[name="ClosingTime"]');
+        const openDaysInput = document.getElementById('OpenDays');
+
+        if (openingTimeInput) {
+            openingTimeInput.value = ""; // Clear value
+        }
+        if (closingTimeInput) {
+            closingTimeInput.value = ""; // Clear value
+        }
+        if (openDaysInput) {
+            openDaysInput.value = ""; // Clear open days
+        }
+
+        // Clear the day checkboxes
+        const checkboxes = document.querySelectorAll('.dayCheckbox');
+        checkboxes.forEach(checkbox => {
+            checkbox.checked = false; // Uncheck all checkboxes
+        });
+    }
+
+    // Initial call to set the correct fields when the page loads
+    showFields();
 
     function updateOpenDays() {
         const checkboxes = document.querySelectorAll('.dayCheckbox');
@@ -72,7 +175,4 @@
 
         document.getElementById('OpenDays').value = openDaysBinary;
     }
-
-    // Initial call to set the correct fields when the page loads
-    showFields();
 </script>

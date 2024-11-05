@@ -4,15 +4,17 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - TurismoNeuquen</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    @* <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" /> *@
+    <link rel="stylesheet" href="~/css/custom.css"/>
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/TurismoNeuquen.styles.css" asp-append-version="true" />
+    <link rel="icon" href="@Url.Content("~/images/logo.svg")" type="image/x-icon">
 </head>
 <body>
     <header style="background-color: white; z-index: 2;">
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-primary border-bottom box-shadow">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">TurismoNeuquen</a>
+                <a asp-page=" /Index"><img src="@Url.Content("~/images/logo.svg")" alt="Logo" class="responsive-logo img-fluid" /></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -20,31 +22,27 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
+                            <a class="nav-link text-light" asp-area="" asp-page="/Index">Mapa</a>
                         </li>
                          <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/AddPoi">Añadir Pois</a>
+                            <a class="nav-link text-light" asp-area="" asp-page="/AddPoi">Añadir Pois</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-@*     <form class="d-flex" asp-page="/DetailsPoi" method="get">
-        <input class="form-control me-2" type="search" name="name" placeholder="Search POI" aria-label="Search POI">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-    </form> *@
-    <div class="container">
-        <main role="main" class="pb-3">
+    <div class="main-container">
+        <main role="main">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted" style="background-color: white; z-index: 2;">
+    @* <footer class="border-top footer text-muted" style="background-color: white; z-index: 2;">
         <div class="container">
             &copy; 2024 - TurismoNeuquen - <a asp-area="" asp-page="/Privacy">Privacy</a>
         </div>
-    </footer>
+    </footer> *@
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
