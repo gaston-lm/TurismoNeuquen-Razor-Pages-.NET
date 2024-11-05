@@ -4,9 +4,11 @@ using TurismoNeuquen.Models;
 using TurismoNeuquen.Services;
 using Microsoft.Extensions.Logging;
 using System.Collections.Generic;
+using Microsoft.AspNetCore.Authorization;
 
 namespace TurismoNeuquen.Pages
 {
+    [Authorize] // Ensure only authenticated users can access this page
     public class AdminModel : PageModel
     {
         private readonly AdminService _adminService;

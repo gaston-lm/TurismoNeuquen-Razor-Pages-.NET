@@ -9,6 +9,7 @@ using Microsoft.EntityFrameworkCore.SqlServer;
 using Microsoft.EntityFrameworkCore.Design;
 using System;
 using TurismoNeuquen.Models;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -46,12 +47,18 @@ builder.Services.AddDbContext<PoiContext>(options =>
     //Agregar retry
 });
 
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(options =>
+    {
+        options.LoginPath = "/AdminLogin"; // Redirect here if not authenticated
+    });
 
 // Register the service AdminService
 builder.Services.AddScoped<AdminService>();
 
 // Registrar el servicio IPoiService
 builder.Services.AddScoped<IPoiService, PoiService>();
+builder.Services.AddScoped<ILoginService, LoginService>();
 
 var app = builder.Build();
 
@@ -70,6 +77,11 @@ else
 
 app.UseHttpsRedirection();  // Redirección a HTTPS
 app.UseStaticFiles();  // Servir archivos estáticos
+
+app.UseRouting();
+
+app.UseAuthentication();
+app.UseAuthorization();
 
 // Para compatibilidad con MVC (al desactivar el enrutamiento de endpoint)
 app.UseMvc();
