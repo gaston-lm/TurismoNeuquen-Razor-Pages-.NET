@@ -17,9 +17,33 @@
 
     <!-- Attraction-specific fields -->
     <div id="attractionFields" style="display: none;">
-        <input type="text" name="OpenDays" placeholder="Días de apertura" />
-        <input type="time" name="OpeningTime" placeholder="Hora de apertura" />
-        <input type="time" name="ClosingTime" placeholder="Hora de cierre" />
+        <fieldset>
+            <legend>Días de apertura:</legend>
+            <label>
+                <input type="checkbox" class="dayCheckbox" value="0" onchange="updateOpenDays()" /> Lunes
+            </label>
+            <label>
+                <input type="checkbox" class="dayCheckbox" value="1" onchange="updateOpenDays()" /> Martes
+            </label>
+            <label>
+                <input type="checkbox" class="dayCheckbox" value="2" onchange="updateOpenDays()" /> Miércoles
+            </label>
+            <label>
+                <input type="checkbox" class="dayCheckbox" value="3" onchange="updateOpenDays()" /> Jueves
+            </label>
+            <label>
+                <input type="checkbox" class="dayCheckbox" value="4" onchange="updateOpenDays()" /> Viernes
+            </label>
+            <label>
+                <input type="checkbox" class="dayCheckbox" value="5" onchange="updateOpenDays()" /> Sábado
+            </label>
+            <label>
+                <input type="checkbox" class="dayCheckbox" value="6" onchange="updateOpenDays()" /> Domingo
+            </label>
+        </fieldset>
+        <input type="hidden" name="OpenDays" id="OpenDays" />
+        <input type="time" name="OpeningTime" placeholder="Hora de apertura" required />
+        <input type="time" name="ClosingTime" placeholder="Hora de cierre" required />
     </div>
 
     <!-- Event-specific fields -->
@@ -36,6 +60,17 @@
         const poiType = document.getElementById("poiType").value;
         document.getElementById("attractionFields").style.display = poiType === "attraction" ? "block" : "none";
         document.getElementById("eventFields").style.display = poiType === "event" ? "block" : "none";
+    }
+
+    function updateOpenDays() {
+        const checkboxes = document.querySelectorAll('.dayCheckbox');
+        let openDaysBinary = '';
+
+        checkboxes.forEach((checkbox, index) => {
+            openDaysBinary += checkbox.checked ? '1' : '0';
+        });
+
+        document.getElementById('OpenDays').value = openDaysBinary;
     }
 
     // Initial call to set the correct fields when the page loads

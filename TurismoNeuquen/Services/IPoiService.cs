@@ -11,6 +11,6 @@ namespace TurismoNeuquen.Services
         void DeletePOI(PointOfInterest poi);
         void AddPoi(string poiType, string name, string description, double latitude, double longitude,
             DateTime? eventDate = null, string? location = null,
-            List<string>? openDays = null, TimeOnly? openingTime = null, TimeOnly? closingTime = null);
+            string? openDays = null, TimeOnly? openingTime = null, TimeOnly? closingTime = null);
     }
 }
