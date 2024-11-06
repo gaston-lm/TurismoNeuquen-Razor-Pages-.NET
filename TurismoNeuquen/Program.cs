@@ -46,7 +46,7 @@ builder.Services.AddDbContext<PoiContext>(options =>
         connection, 
         sqlServerOptions => sqlServerOptions.EnableRetryOnFailure(
             maxRetryCount: 5,       // Number of retry attempts (default is 6)
-            maxRetryDelay: TimeSpan.FromSeconds(10), // Delay between retries
+            maxRetryDelay: TimeSpan.FromSeconds(2), // Delay between retries
             errorNumbersToAdd: null // Custom list of SQL error numbers to add (optional)
         )
     );
