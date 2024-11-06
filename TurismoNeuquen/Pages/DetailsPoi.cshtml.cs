@@ -19,7 +19,7 @@ namespace TurismoNeuquen.Pages
 
         public IActionResult OnGet(int id)
         {
-            PointOfInterest = _poiService.GetPOIs().SingleOrDefault(x => x.Id == id);
+            PointOfInterest = _poiService.GetPOI(id);
 
             if (PointOfInterest == null)
             {

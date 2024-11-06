@@ -23,10 +23,13 @@
                     <input type="text" name="Description" class="form-control" placeholder="Descripción" required />
                 </div>
                 <div class="mb-3">
-                    <input type="text" step="any" name="Latitude" class="form-control" placeholder="Latitud" required />
+                    <input id="lat" type="text" step="any" name="Latitude" class="form-control" placeholder="Latitud" required />
                 </div>
                 <div class="mb-3">
-                    <input type="text" step="any" name="Longitude" class="form-control" placeholder="Longitud" required />
+                    <input id="lng" type="text" step="any" name="Longitude" class="form-control" placeholder="Longitud" required />
+                </div>
+                <div class="mb-3">
+                    <div id="selectMap" style="height: 400px; position: sticky; border: 1px solid #ddd;"></div>
                 </div>
 
                 <!-- Attraction-specific fields -->
@@ -86,6 +89,45 @@
         </div>
     </div>
 </div>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script>
+    // Initialize map for selecting coordinates
+    document.addEventListener("DOMContentLoaded", function () {
+        // Set initial map view over Neuquén, Argentina
+        const lat = -38.5;
+        const lon = -68.0;
+        const selectMap = L.map('selectMap').setView([lat, lon], 8);
+
+        // Add OpenStreetMap tiles
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(selectMap);
+
+        // Variable to store the marker
+        let selectionMarker;
+
+        // Handle map clicks to update coordinates
+        selectMap.on('click', function (e) {
+            const { lat, lng } = e.latlng;
+
+            // Update input fields with clicked coordinates
+            document.getElementById('lat').value = lat;
+            document.getElementById('lng').value = lng;
+
+            // Add or move marker to clicked location
+            if (selectionMarker) {
+                selectionMarker.setLatLng([lat, lng]);
+            } else {
+                selectionMarker = L.marker([lat, lng]).addTo(selectMap);
+            }
+        });
+    });
+
+    // Rest of the JavaScript for handling POI type selection and required fields
+</script>
 
 <script>
     function showFields() {

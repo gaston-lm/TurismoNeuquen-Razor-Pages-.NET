@@ -42,7 +42,15 @@ else
 builder.Services.AddDbContext<PoiContext>(options =>
 {
     //options.UseInMemoryDatabase("bookTestDb");
-    options.UseSqlServer(connection);
+    options.UseSqlServer(
+        connection, 
+        sqlServerOptions => sqlServerOptions.EnableRetryOnFailure(
+            maxRetryCount: 5,       // Number of retry attempts (default is 6)
+            maxRetryDelay: TimeSpan.FromSeconds(10), // Delay between retries
+            errorNumbersToAdd: null // Custom list of SQL error numbers to add (optional)
+        )
+    );
+
 
     //Agregar retry
 });
