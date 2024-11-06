@@ -49,7 +49,7 @@ namespace TurismoNeuquen.Services
             }
             else if (poiType == "event" && eventDate.HasValue && location != null)
             {
-                poi = Event.Create(name, description, latitude, longitude,imagename, eventDate.Value, location);
+                poi = Event.Create(name, description, latitude, longitude, imagename, eventDate.Value, location);
             }
             else
             {
