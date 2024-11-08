@@ -15,7 +15,7 @@
                             <p class="card-text">@poi.Name</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
-                                    <a asp-page="DetailsPoi" asp-route-id="@poi.Id" class="btn btn-sm btn-outline-primary">Details</a>
+                                    <a asp-page="AdminDetailsPoi" asp-route-id="@poi.Id" class="btn btn-sm btn-outline-primary">Details</a>
                                     <form method="post" asp-page-handler="Confirm" asp-route-id="@poi.Id">
                                         <button type="submit" class="btn btn-sm btn-outline-success">Confirm</button>
                                     </form>
