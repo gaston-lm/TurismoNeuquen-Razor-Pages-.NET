@@ -39,7 +39,7 @@ namespace TurismoNeuquen.Services
             _poiContext.SaveChanges();
         }
 
-        public void AddPoi(string poiType, string name, string description, double latitude, double longitude, string imagename, DateTime? eventDate = null, string? location = null, string? openDays = null, TimeOnly? openingTime = null, TimeOnly? closingTime = null)
+        public void AddPoi(string poiType, string name, string description, double latitude, double longitude, string imagename, DateTime? eventDate = null, string? openDays = null, TimeOnly? openingTime = null, TimeOnly? closingTime = null)
         {
             PointOfInterest poi;
 
@@ -47,9 +47,9 @@ namespace TurismoNeuquen.Services
             {
                 poi = Attraction.Create(name, description, latitude, longitude, imagename, openDays, openingTime, closingTime);
             }
-            else if (poiType == "event" && eventDate.HasValue && location != null)
+            else if (poiType == "event" && eventDate.HasValue)
             {
-                poi = Event.Create(name, description, latitude, longitude, imagename, eventDate.Value, location);
+                poi = Event.Create(name, description, latitude, longitude, imagename, eventDate.Value);
             }
             else
             {

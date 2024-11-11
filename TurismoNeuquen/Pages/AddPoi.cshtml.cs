@@ -25,7 +25,6 @@ namespace TurismoNeuquen.Pages
 
         // Fields specific to Event
         [BindProperty] public DateTime? EventDate { get; set; }
-        [BindProperty] public string? Location { get; set; }
 
         // Fields specific to Attraction
         [BindProperty] public string OpenDays { get; set; } // Changed to string for binary representation
@@ -35,7 +34,7 @@ namespace TurismoNeuquen.Pages
         public IActionResult OnPostAddPOI()
         {
             // Here, you can store the OpenDays string as needed.
-            _poiService.AddPoi(PoiType, Name, Description, Latitude, Longitude, ImageName, EventDate, Location, OpenDays, OpeningTime, ClosingTime);
+            _poiService.AddPoi(PoiType, Name, Description, Latitude, Longitude, ImageName, EventDate, OpenDays, OpeningTime, ClosingTime);
 
             return RedirectToPage("/Index"); // Redirect to a success page or another appropriate action
         }

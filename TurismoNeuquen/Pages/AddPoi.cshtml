@@ -4,42 +4,53 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-6">
-            <form method="post" asp-page-handler="AddPOI" class="p-4 border rounded bg-light">
+            <form method="post" asp-page-handler="AddPOI" class="p-4 border rounded bg-light mt-3 mb-3">
                 <div class="mb-3">
-                    <div class="btn-group" role="group" aria-label="POI Type">
+                    <label for="poiType" class="form-label">Tipo de Punto de Interés</label>
+                    <div class="btn-group w-100" role="group" aria-label="POI Type">
                         <input type="radio" class="btn-check" name="poiType" id="optionAttraction" value="attraction" autocomplete="off" checked onchange="showFields()">
                         <label class="btn btn-outline-secondary" for="optionAttraction">Atracción</label>
 
                         <input type="radio" class="btn-check" name="poiType" id="optionEvent" value="event" autocomplete="off" onchange="showFields()">
                         <label class="btn btn-outline-secondary" for="optionEvent">Evento</label>
                     </div>
+                    <small class="form-text text-muted">Seleccione si es una atracción o un evento.</small>
                 </div>
 
                 <!-- Common fields -->
                 <div class="mb-3">
+                    <label for="name" class="form-label">Nombre del PoI</label>
                     <input type="text" name="Name" class="form-control" placeholder="Nombre" required />
+                    <small class="form-text text-muted">Ingrese el nombre del punto de interés.</small>
                 </div>
                 <div class="mb-3">
-                    <input type="text" name="Description" class="form-control" placeholder="Descripción" required />
+                    <label for="name" class="form-label">Descripción del PoI</label>
+                    <textarea type="text" name="Description" class="form-control" placeholder="Descripción" required /></textarea>
+                    <small class="form-text text-muted">Proporcione una breve descripción del punto de interés.</small>
                 </div>
-                <div class="mb-3">
+                <div class="mb-3" style="display:none;">
                     <input id="lat" type="text" step="any" name="Latitude" class="form-control" placeholder="Latitud" required />
                 </div>
-                <div class="mb-3">
+                <div class="mb-3" style="display:none;">
                     <input id="lng" type="text" step="any" name="Longitude" class="form-control" placeholder="Longitud" required />
                 </div>
                 <div class="mb-3">
-                    <div id="selectMap" style="height: 400px; position: sticky; border: 1px solid #ddd;"></div>
+                    <label for="name" class="form-label w-100">Ubicación del PoI</label>
+                    <small class="form-text text-muted">Haga clic en el mapa para seleccionar la ubicación del punto de interés.</small>
+                    <div id="selectMap" style="margin-top: 10px;height: 400px;position: sticky;border: 1px solid #ddd;"></div>
                 </div>
                 <div class="mb-3">
-                    <input type="text" name="ImageName" class="form-control" placeholder="Nombre Imagen" required />
+                    <label for="name" class="form-label">Imagen del PoI</label>
+                    <input type="text" name="ImageName" class="form-control" placeholder="Enlace a imagen" required />
+                    <small class="form-text text-muted">Ingrese el enlace a una imagen representativa del punto de interés.</small>
                 </div>
 
 
                 <!-- Attraction-specific fields -->
                 <div id="attractionFields" style="display: block;">
                     <fieldset class="border p-3 mb-3">
-                        <legend class="float-none w-auto px-2">Días de apertura:</legend>
+                        <legend class="float-none w-auto px-2" style="font-size: 1rem;">Días de apertura:</legend>
+                        <small class="form-text text-muted">Seleccione los días en los que la atracción está abierta.</small>
                         <div class="form-check">
                             <input type="checkbox" class="form-check-input dayCheckbox" value="0" onchange="updateOpenDays()" />
                             <label class="form-check-label">Lunes</label>
@@ -71,24 +82,27 @@
                     </fieldset>
                     <input type="hidden" name="OpenDays" id="OpenDays" />
                     <div class="mb-3">
+                        <label for="openingTime" class="form-label">Hora de Apertura</label>
                         <input type="time" name="OpeningTime" class="form-control" required />
+                        <small class="form-text text-muted">Ingrese la hora de apertura de la atracción.</small>
                     </div>
                     <div class="mb-3">
+                        <label for="closingTime" class="form-label">Hora de Cierre</label>
                         <input type="time" name="ClosingTime" class="form-control" required />
+                        <small class="form-text text-muted">Ingrese la hora de cierre de la atracción.</small>
                     </div>
                 </div>
 
                 <!-- Event-specific fields -->
                 <div id="eventFields" style="display: none;">
                     <div class="mb-3">
+                        <label for="eventDate" class="form-label">Fecha del Evento</label>
                         <input type="datetime-local" name="EventDate" class="form-control" placeholder="Fecha del evento" required />
-                    </div>
-                    <div class="mb-3">
-                        <input type="text" name="Location" class="form-control" placeholder="Ubicación" required />
+                        <small class="form-text text-muted">Ingrese la fecha y hora en que se realizará el evento.</small>
                     </div>
                 </div>
 
-                <button type="submit" class="btn btn-secondary">Enviar solicitud</button>
+                <button type="submit" class="btn btn-secondary w-100">Enviar solicitud</button>
             </form>
         </div>
     </div>
