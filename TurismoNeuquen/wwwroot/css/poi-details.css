@@ -1,0 +1,63 @@
+﻿/* poi-details.css */
+
+.main-img-poi {
+    max-height: 300px;
+    height: auto;
+}
+
+#attractionFields{
+    display:none;
+    margin-bottom: 10px;
+}
+
+#eventFields {
+    display: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Adjust card overlay for larger screens */
+@media (min-width: 768px) {
+    #poiMap {
+        position: relative;
+        height: calc(100vh - 50px);
+        min-height: 400px;
+        border: 1px solid #ddd;
+    }
+
+    .details-card {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 10;
+        width: 90%;
+        max-width: 400px;
+        background-color: rgba(255, 255, 255, 0.9); /* Slight transparency */
+    }
+
+    .map_container {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .map_container {
+        order: 2; /* Move map to bottom */
+        width: 100%; /* Full width */
+        margin-top: 10px; /* Add space above the map */
+    }
+
+    .card-body {
+        padding-bottom: 20px;
+    }
+
+    /* Optional: Limit map height on mobile */
+    #poiMap {
+        height: 400px;
+    }
+
+    .main-img-poi {
+        margin-top: calc(var(--bs-gutter-x) / 2);
+    }
+}
