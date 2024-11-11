@@ -19,8 +19,8 @@
 /* Adjust card overlay for larger screens */
 @media (min-width: 768px) {
     #poiMap {
-        position: relative;
-        height: calc(100vh - 50px);
+        position: sticky;
+        height: 100%;
         min-height: 400px;
         border: 1px solid #ddd;
     }
