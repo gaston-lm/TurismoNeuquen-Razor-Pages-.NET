@@ -50,16 +50,22 @@ builder.Services.AddDbContext<PoiContext>(options =>
             errorNumbersToAdd: null // Custom list of SQL error numbers to add (optional)
         )
     );
-
-
-    //Agregar retry
 });
 
-builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-    .AddCookie(options =>
-    {
-        options.LoginPath = "/AdminLogin"; // Redirect here if not authenticated
-    });
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme; // Default scheme
+    options.DefaultChallengeScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+})
+.AddCookie(CookieAuthenticationDefaults.AuthenticationScheme, options =>
+{
+    options.LoginPath = "/AdminLogin"; // Default login path for first cookie
+})
+.AddCookie("UserCookie", options => // Custom authentication scheme for the second cookie
+{
+    options.LoginPath = "/UserLogin"; // Redirect here for the second cookie
+});
+
 
 // Register the service AdminService
 builder.Services.AddScoped<AdminService>();

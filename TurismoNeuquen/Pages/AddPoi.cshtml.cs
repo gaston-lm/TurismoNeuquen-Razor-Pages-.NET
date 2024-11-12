@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using TurismoNeuquen.Models;
@@ -5,6 +6,8 @@ using TurismoNeuquen.Services;
 
 namespace TurismoNeuquen.Pages
 {
+    // Ensure the user is authenticated using the "CustomCookie" authentication scheme
+    [Authorize(AuthenticationSchemes = "UserCookie")]
     public class AddPoiModel : PageModel
     {
         private readonly IPoiService _poiService;
@@ -21,7 +24,6 @@ namespace TurismoNeuquen.Pages
         [BindProperty] public double Longitude { get; set; }
 
         [BindProperty] public string ImageName { get; set; }
-
 
         // Fields specific to Event
         [BindProperty] public DateTime? EventDate { get; set; }

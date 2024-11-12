@@ -4,8 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TurismoNeuquen</title>
-    @* <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" /> *@
-    <link rel="stylesheet" href="~/css/custom.css"/>
+    <link rel="stylesheet" href="~/css/custom.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/TurismoNeuquen.styles.css" asp-append-version="true" />
     <link rel="icon" href="@Url.Content("~/images/logo.svg")" type="image/x-icon">
@@ -14,7 +13,7 @@
     <header style="background-color: white; z-index: 2;">
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-primary border-bottom box-shadow">
             <div class="container">
-                <a asp-page=" /Index"><img src="@Url.Content("~/images/logo.svg")" alt="Logo" class="responsive-logo img-fluid" /></a>
+                <a asp-page="/Index"><img src="@Url.Content("~/images/logo.svg")" alt="Logo" class="responsive-logo img-fluid" /></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -24,9 +23,22 @@
                         <li class="nav-item">
                             <a class="nav-link text-light" asp-area="" asp-page="/Index">Mapa</a>
                         </li>
-                         <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-page="/AddPoi">Añadir Pois</a>
-                        </li>
+
+                        @* Only show the "Añadir Pois" link if the CustomCookie is present *@
+                        @if (Context.Request.Cookies.ContainsKey(".AspNetCore.UserCookie"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-light" asp-area="" asp-page="/AddPoi">Añadir Pois</a>
+                            </li>
+                        }
+                    </ul>
+                    <ul class="navbar-nav ms-auto">
+                        @if (Context.Request.Cookies[".AspNetCore.UserCookie"] == null)
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-light" asp-area="" asp-page="/UserLogin">Iniciar Sesión</a>
+                            </li>
+                        }
                     </ul>
                 </div>
             </div>
@@ -37,12 +49,6 @@
             @RenderBody()
         </main>
     </div>
-
-    @* <footer class="border-top footer text-muted" style="background-color: white; z-index: 2;">
-        <div class="container">
-            &copy; 2024 - TurismoNeuquen - <a asp-area="" asp-page="/Privacy">Privacy</a>
-        </div>
-    </footer> *@
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

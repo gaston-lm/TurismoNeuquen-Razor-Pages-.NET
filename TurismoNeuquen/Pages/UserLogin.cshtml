@@ -1,0 +1,29 @@
+﻿@page
+@model TurismoNeuquen.Pages.UserLoginModel
+@{
+    ViewData["Title"] = "User Login";
+}
+
+<h2>User Login</h2>
+
+<form method="post">
+    <div>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="Username" required />
+    </div>
+
+    <div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="Password" required />
+    </div>
+
+    <button type="submit">Login</button>
+</form>
+
+@if (!string.IsNullOrEmpty(Model.ErrorMessage))
+{
+    <p style="color: red;">@Model.ErrorMessage</p>
+}
+
+<!-- Sign-Up Link -->
+<p>Don't have an account? <a href="/SignUp">Sign up here</a></p> <!-- Adjust link to match your sign-up page URL -->

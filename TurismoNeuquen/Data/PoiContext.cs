@@ -12,6 +12,7 @@ namespace TurismoNeuquen.Data
         }
         public DbSet<PointOfInterest> PointsOfInterest { get; set; }
         public DbSet<Admin> Admins { get; set; }
+        public DbSet<User> Users { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
