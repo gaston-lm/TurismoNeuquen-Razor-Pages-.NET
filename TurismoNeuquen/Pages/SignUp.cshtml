@@ -4,26 +4,32 @@
     ViewData["Title"] = "User Sign-Up";
 }
 
-<h2>User Sign-Up</h2>
+<div class="container d-flex justify-content-center align-items-center" style=" min-height: calc(100vh - 60px);">
+    <div class="card shadow-lg" style="max-width: 400px; width: 100%;">
+        <div class="card-body">
+            <h2 class="card-title text-center mb-4">Registrarse</h2>
 
-<form method="post">
-    <div>
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="Username" required />
+            <form method="post">
+                <div class="mb-3">
+                    <label for="username" class="form-label">Nombre de usuario</label>
+                    <input type="text" id="username" name="Username" class="form-control" required />
+                </div>
+
+                <div class="mb-3">
+                    <label for="password" class="form-label">Constraseña:</label>
+                    <input type="password" id="password" name="Password" class="form-control" required />
+                </div>
+
+                <div class="mb-3">
+                    <label for="confirmPassword" class="form-label">Confirmar constraseña:</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" class="form-control" required />
+                </div>
+
+                <button type="submit" class="btn btn-secondary w-100">Registrarse</button>
+            </form>
+        </div>
     </div>
-
-    <div>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="Password" required />
-    </div>
-
-    <div>
-        <label for="confirmPassword">Confirm Password:</label>
-        <input type="password" id="confirmPassword" name="ConfirmPassword" required />
-    </div>
-
-    <button type="submit">Sign Up</button>
-</form>
+</div>
 
 @if (!string.IsNullOrEmpty(Model.ErrorMessage))
 {

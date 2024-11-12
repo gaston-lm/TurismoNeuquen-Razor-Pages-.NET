@@ -47,7 +47,5 @@ namespace TurismoNeuquen.Services
 
             return true; // Registration successful
         }
-
-
     }
 }
