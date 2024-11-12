@@ -66,11 +66,8 @@ builder.Services.AddAuthentication(options =>
     options.LoginPath = "/UserLogin"; // Redirect here for the second cookie
 });
 
-
-// Register the service AdminService
-builder.Services.AddScoped<AdminService>();
-
-// Registrar el servicio IPoiService
+//builder.Services.AddHttpClient<IUploadImage, UploadImage>();
+builder.Services.AddScoped<IAdminService, AdminService>();
 builder.Services.AddScoped<IPoiService, PoiService>();
 builder.Services.AddScoped<ILoginService, LoginService>();
 

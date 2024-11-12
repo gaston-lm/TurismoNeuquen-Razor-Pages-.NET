@@ -5,7 +5,7 @@ using TurismoNeuquen.Models;
 
 namespace TurismoNeuquen.Services
 {
-    public class AdminService : Controller
+    public class AdminService : IAdminService
     {
         private readonly PoiContext _poiContext;
 
