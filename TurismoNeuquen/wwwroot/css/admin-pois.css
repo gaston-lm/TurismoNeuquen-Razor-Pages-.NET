@@ -1,0 +1,37 @@
+﻿.poi-name {
+    max-width: 150px; /* Adjust as needed or use a responsive CSS approach */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Responsive width adjustments for different screen sizes */
+
+@media (min-width: 320px) {
+    .poi-name {
+        max-width: 120px;
+    }
+}
+
+@media (min-width: 375px) {
+    .poi-name {
+        max-width: 165px;
+    }
+}
+
+@media (min-width: 768px) {
+    .poi-name {
+        max-width: 220px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .poi-name {
+        max-width: 400px;
+    }
+}
+
+.scrollable-list {
+    max-height: 400px; /* Adjust this value according to your needs */
+    overflow-y: auto;
+}

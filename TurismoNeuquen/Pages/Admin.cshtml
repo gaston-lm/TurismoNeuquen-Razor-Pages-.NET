@@ -1,35 +1,42 @@
 ﻿@page
 @model TurismoNeuquen.Pages.AdminModel
 @{
-}
-<div class="text-center">
-    <h1 class="display-4">Puntos de Interés</h1>
 
-    <div class="container">
-        <div class="row">
-            @foreach (var poi in Model.Pois)
-            {
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <p class="card-text">@poi.Name</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <a asp-page="AdminDetailsPoi" asp-route-id="@poi.Id" class="btn btn-sm btn-outline-primary">Details</a>
-                                    <form method="post" asp-page-handler="Confirm" asp-route-id="@poi.Id">
-                                        <button type="submit" class="btn btn-sm btn-outline-success">Confirm</button>
-                                    </form>
-                                    <form method="post" asp-page-handler="Delete" asp-route-id="@poi.Id">
-                                        <button type="submit" class="btn btn-sm btn-outline-danger">Delete</button>
-                                    </form>
-                                </div>
-                                <small class="text-muted">@poi.Description</small>
-                            </div>
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/admin-pois.css" />
+</head>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8 p-4 border rounded bg-light mt-3 mb-3">
+            <h3 class="text-center mb-4">Puntos de interés pendientes</h3>
+            <p class="text-left mb-3">A continuación se muestran los puntos de interés que han sido creados por los usuarios y que están pendientes de aprobación.</p>
+            <ul class="list-group scrollable-list">
+                @foreach (var poi in Model.Pois)
+                {
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <!-- Left Section: Name (with truncation) and Details button -->
+                        <div class="d-flex flex-column mr-3 my-1">
+                            <span class="card-title font-weight-bold text-truncate poi-name">@poi.Name</span>
+                            <a asp-page="AdminDetailsPoi" asp-route-id="@poi.Id" 
+                               class="btn btn-sm btn-outline-primary my-2" 
+                               style="width: 90px;">Detalles</a>
                         </div>
-                    </div>
-                </div>
-            }
+
+                        <!-- Right Section: Confirm and Delete buttons, centered vertically and side by side -->
+                        <div class="d-flex align-items-center gap-2">
+                            <form method="post" asp-page-handler="Confirm" asp-route-id="@poi.Id" style="display:inline;">
+                                <button type="submit" class="btn btn-sm btn-outline-success">Confirmar</button>
+                            </form>
+                            <form method="post" asp-page-handler="Delete" asp-route-id="@poi.Id" style="display:inline;">
+                                <button type="submit" class="btn btn-sm btn-outline-danger">Borrar</button>
+                            </form>
+                        </div>
+                    </li>
+                }
+            </ul>
         </div>
     </div>
 </div>
-``
