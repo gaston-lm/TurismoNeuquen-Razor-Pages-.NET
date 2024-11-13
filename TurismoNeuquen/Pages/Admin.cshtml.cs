@@ -11,12 +11,12 @@ namespace TurismoNeuquen.Pages
     [Authorize] // Ensure only authenticated users can access this page
     public class AdminModel : PageModel
     {
-        private readonly AdminService _adminService;
+        private readonly IAdminService _adminService;
         private readonly ILogger<AdminModel> _logger;
 
         public IEnumerable<PointOfInterest> Pois { get; set; }
 
-        public AdminModel(AdminService adminService, ILogger<AdminModel> logger)
+        public AdminModel(IAdminService adminService, ILogger<AdminModel> logger)
         {
             _adminService = adminService;
             _logger = logger;

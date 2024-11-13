@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <form method="post" asp-page-handler="AddPOI" class="p-4 border rounded bg-light mt-3 mb-3">
+            <form method="post" asp-page-handler="AddPOI" class="p-4 border rounded bg-light mt-3 mb-3" enctype="multipart/form-data">
                 <div class="mb-3">
                     <label for="poiType" class="form-label">Tipo de Punto de Interés</label>
                     <div class="btn-group w-100" role="group" aria-label="POI Type">
@@ -39,10 +39,11 @@
                     <small class="form-text text-muted">Haga clic en el mapa para seleccionar la ubicación del punto de interés.</small>
                     <div id="selectMap" style="margin-top: 10px;height: 400px;position: sticky;border: 1px solid #ddd;"></div>
                 </div>
+
                 <div class="mb-3">
                     <label for="name" class="form-label">Imagen del PoI</label>
-                    <input type="text" name="ImageName" class="form-control" placeholder="Enlace a imagen" required />
-                    <small class="form-text text-muted">Ingrese el enlace a una imagen representativa del punto de interés.</small>
+                    <input type="file" name="ImageFile" class="form-control" placeholder="Subir imagen" required />
+                    <small class="form-text text-muted">.</small>
                 </div>
 
 

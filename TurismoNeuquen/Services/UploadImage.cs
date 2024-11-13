@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using System.Collections.Generic;
 using EjemploComponentes.Services;
-using TurismoNeuqen.Services;
+using TurismoNeuquen.Services;
 
 namespace EjemploComponentes.Services
 {

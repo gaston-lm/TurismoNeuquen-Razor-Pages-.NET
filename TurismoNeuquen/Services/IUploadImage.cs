@@ -1,4 +1,4 @@
-﻿namespace TurismoNeuqen.Services
+﻿namespace TurismoNeuquen.Services
 {
 
     public interface IUploadImage
