@@ -4,6 +4,10 @@
     ViewData["Title"] = "Como Llegar a POIs";
 }
 
+<head>
+    <link rel="stylesheet" href="~/css/comos.css" />
+</head>
+
 <!-- Map container and search input -->
 <div class="container-fluid">
     <!-- Search input with instructions -->
@@ -12,35 +16,25 @@
     </div>
 
     <!-- Map container -->
-    <div id="map" style="width: 100%; height: 500px; margin-top: 10px;"></div>
+    <div id="map"></div>
 </div>
-
-<!-- Styles for the search input -->
-<style>
-    .search-container {
-        position: absolute;
-        top: 10px;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 1000;
-        width: 80%;
-        max-width: 400px;
-    }
-    #searchInput {
-        width: 100%;
-        padding: 10px;
-        font-size: 16px;
-        border: 2px solid #ddd;
-        border-radius: 5px;
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    }
-</style>
 
 <!-- Leaflet and Routing Machine -->
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.css" />
 <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
+
+<!-- Pass server-side data to JavaScript ESTO ES PARA PASAR A JS LAS VARIABLES --> 
+<script>
+    window.startPointLat = @Html.Raw(@Model.StartPoint.Latitude);
+    window.startPointLong = @Html.Raw(@Model.StartPoint.Longitude);
+
+    window.endPointLat = @Html.Raw(@Model.EndPoint.Latitude);
+    window.endPointLong = @Html.Raw(@Model.EndPoint.Longitude);
+
+    window.endPointName = @Html.Raw(@Model.EndPoint.Name);
+</script>
 
 <script>
     document.addEventListener("DOMContentLoaded", function () {
