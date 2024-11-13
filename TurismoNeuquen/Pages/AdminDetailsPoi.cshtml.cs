@@ -12,7 +12,7 @@ namespace TurismoNeuquen.Pages
 
     public class AdminDetailsPoiModel : PageModel
     {
-        private readonly AdminService _adminService;
+        private readonly IAdminService _adminService;
         private readonly ILogger<AdminModel> _logger;
 
         private readonly IPoiService _poiService;
@@ -25,7 +25,7 @@ namespace TurismoNeuquen.Pages
 
         public int Type { get; set; }
 
-        public AdminDetailsPoiModel(IPoiService poiService, AdminService adminService, ILogger<AdminModel> logger)
+        public AdminDetailsPoiModel(IPoiService poiService, IAdminService adminService, ILogger<AdminModel> logger)
         {
             _poiService = poiService;
             _adminService = adminService;

@@ -10,6 +10,7 @@ using Microsoft.EntityFrameworkCore.Design;
 using System;
 using TurismoNeuquen.Models;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using EjemploComponentes.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -66,7 +67,7 @@ builder.Services.AddAuthentication(options =>
     options.LoginPath = "/UserLogin"; // Redirect here for the second cookie
 });
 
-//builder.Services.AddHttpClient<IUploadImage, UploadImage>();
+builder.Services.AddHttpClient<IUploadImage, UploadImage>();
 builder.Services.AddScoped<IAdminService, AdminService>();
 builder.Services.AddScoped<IPoiService, PoiService>();
 builder.Services.AddScoped<ILoginService, LoginService>();

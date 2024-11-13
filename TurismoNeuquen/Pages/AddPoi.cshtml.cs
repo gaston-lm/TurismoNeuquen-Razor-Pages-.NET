@@ -11,10 +11,12 @@ namespace TurismoNeuquen.Pages
     public class AddPoiModel : PageModel
     {
         private readonly IPoiService _poiService;
+        private readonly IUploadImage _uploadImage;
 
-        public AddPoiModel(IPoiService poiService)
+        public AddPoiModel(IPoiService poiService, IUploadImage uploadImage)
         {
             _poiService = poiService;
+            _uploadImage = uploadImage;
         }
 
         [BindProperty] public string PoiType { get; set; }
@@ -23,7 +25,9 @@ namespace TurismoNeuquen.Pages
         [BindProperty] public double Latitude { get; set; }
         [BindProperty] public double Longitude { get; set; }
 
-        [BindProperty] public string ImageName { get; set; }
+        [BindProperty] public IFormFile ImageFile { get; set; }
+
+        public string ImageName { get; set; }
 
         // Fields specific to Event
         [BindProperty] public DateTime? EventDate { get; set; }
@@ -33,12 +37,22 @@ namespace TurismoNeuquen.Pages
         [BindProperty] public TimeOnly? OpeningTime { get; set; }
         [BindProperty] public TimeOnly? ClosingTime { get; set; }
 
-        public IActionResult OnPostAddPOI()
+        public async Task<IActionResult> OnPostAddPOI()
         {
-            // Here, you can store the OpenDays string as needed.
+            // Check if ImageFile is null or empty
+            if (ImageFile == null || ImageFile.Length == 0)
+            {
+                ModelState.AddModelError("ImageFile", "Please select an image file to upload.");
+                return Page(); // Return to the form page with error
+            }
+
+            ImageName = await _uploadImage.UploadFile(ImageFile);
+
+            // Store the OpenDays string and other data as needed.
             _poiService.AddPoi(PoiType, Name, Description, Latitude, Longitude, ImageName, EventDate, OpenDays, OpeningTime, ClosingTime);
 
             return RedirectToPage("/Index"); // Redirect to a success page or another appropriate action
         }
+
     }
 }
