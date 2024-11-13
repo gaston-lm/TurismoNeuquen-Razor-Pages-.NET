@@ -7,13 +7,21 @@
 
 <div class="container-fluid">
     <div id="map" style="width: 100%"></div>
+    @* Check if the user is logged in and show the floating button *@
+    @if (HttpContext.Request.Cookies.ContainsKey(".AspNetCore.UserCookie"))
+    {
+        <a asp-page="/AddPoi">
+            <button type="button" class="btn btn-primary rounded-circle floating-btn">
+                <i class="fas fa-plus"></i>
+            </button>
+        </a>
+    }
 </div>
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
+        document.addEventListener("DOMContentLoaded", function () {
         const lat = -38.5;
         const lon = -68.0;
         const map = L.map('map').setView([lat, lon], 8);
@@ -32,10 +40,10 @@
 
             // Popup content with a link that directs to the details page
             const popupContent = `
-                <b>${poi.Name}</b><br>
-                ${poi.Description}<br><br>
-                <a href="${detailsUrl}" class="btn btn-sm btn-outline-primary">Details</a>
-            `;
+                    <b>${poi.Name}</b><br>
+                    ${poi.Description}<br><br>
+                    <a href="${detailsUrl}" class="btn btn-sm btn-outline-primary">Details</a>
+                `;
 
             // Add the marker with the popup content
             L.marker([poi.Latitude, poi.Longitude])

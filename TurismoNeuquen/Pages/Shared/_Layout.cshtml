@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/TurismoNeuquen.styles.css" asp-append-version="true" />
     <link rel="icon" href="@Url.Content("~/images/logo.svg")" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header style="background-color: white; z-index: 2;">
@@ -20,24 +21,20 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-page="/Index">Mapa</a>
-                        </li>
-
-                        @* Only show the "Añadir Pois" link if the CustomCookie is present *@
-                        @if (Context.Request.Cookies.ContainsKey(".AspNetCore.UserCookie"))
-                        {
-                            <li class="nav-item">
-                                <a class="nav-link text-light" asp-area="" asp-page="/AddPoi">Añadir Pois</a>
-                            </li>
-                        }
-                    </ul>
                     <ul class="navbar-nav ms-auto">
                         @if (Context.Request.Cookies[".AspNetCore.UserCookie"] == null)
                         {
                             <li class="nav-item">
-                                <a class="nav-link text-light" asp-area="" asp-page="/UserLogin">Iniciar Sesión</a>
+                                <a class="nav-link text-light" asp-area="" asp-page="/UserLogin">
+                                    <i class="fas fa-user"></i>Iniciar Sesión
+                                </a>
+                            </li>
+                        } else
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-light" asp-area="" asp-page="/#">
+                                    <i class="fas fa-user"></i>Username
+                                </a>
                             </li>
                         }
                     </ul>
