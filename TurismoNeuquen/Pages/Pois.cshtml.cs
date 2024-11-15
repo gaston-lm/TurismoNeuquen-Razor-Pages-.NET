@@ -22,27 +22,11 @@ namespace TurismoNeuquen.Pages
 
         public void OnGet()
         {
-            try
             {
-                Pois = _poiService.GetPOIs();
+                Pois = _poiService.GetConfirmedPOIs();
                 throw new ApplicationException("Sample exception.");
             }
-            catch (Exception ex)
-            {
-                _logger.LogError("Error on getting books.", ex);
-            }
-        }
 
-        public IActionResult OnPostDelete(int id)
-        {
-            var book = _poiService.GetPOI(id);
-            if (book == null)
-            {
-                return NotFound();
-            }
-
-            _poiService.DeletePOI(book);
-            return RedirectToPage("Books");
         }
     }
 }

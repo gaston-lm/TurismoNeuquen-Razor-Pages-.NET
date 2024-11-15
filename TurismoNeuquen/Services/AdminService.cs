@@ -2,59 +2,35 @@
 using Microsoft.AspNetCore.Mvc;
 using TurismoNeuquen.Data;
 using TurismoNeuquen.Models;
+using TurismoNeuquen.Repositories;
 
 namespace TurismoNeuquen.Services
 {
     public class AdminService : IAdminService
     {
-        private readonly PoiContext _poiContext;
+        private readonly IPoiRepository _poiRepository;
 
-        public AdminService(PoiContext poiContext)
+        public AdminService(IPoiRepository poiRepository)
         {
-            _poiContext = poiContext;
-            _poiContext.Database.EnsureCreated();
+            _poiRepository = poiRepository;
+        }
+        public PointOfInterest GetPOI(int id)
+        {
+            return _poiRepository.GetPOI(id);
         }
 
-        public IEnumerable<PointOfInterest> GetPOIs()
+        public IEnumerable<PointOfInterest> GetUnconfirmedPOIs()
         {
-            return _poiContext.PointsOfInterest.Where(x => x.State == false);
+            return _poiRepository.GetPOIs(false);
         }
 
         public void Confirm(int poiId)
         {
-            // Retrieve the existing PointOfInterest from the database using the ID
-            var existingPOI = _poiContext.PointsOfInterest.Find(poiId);
-
-            if (existingPOI != null)
-            {
-                // Update the properties you want to change
-                existingPOI.State = true;
-
-                // Save the changes to the database
-                _poiContext.SaveChanges();
-            }
-            else
-            {
-                throw new Exception("Point of Interest not found.");
-            }
+            _poiRepository.Confirm(poiId);
         }
         public void DeletePOI(int poiId)
         {
-            // Find the PointOfInterest in the database using the ID
-            var poiToDelete = _poiContext.PointsOfInterest.Find(poiId);
-
-            if (poiToDelete != null)
-            {
-                // Remove the object from the context
-                _poiContext.PointsOfInterest.Remove(poiToDelete);
-
-                // Save changes to commit the deletion
-                _poiContext.SaveChanges();
-            }
-            else
-            {
-                throw new Exception("Point of Interest not found.");
-            }
+            _poiRepository.DeletePOI(poiId);
         }
 
     }

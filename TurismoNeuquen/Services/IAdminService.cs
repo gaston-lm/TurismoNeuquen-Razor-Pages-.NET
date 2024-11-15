@@ -4,7 +4,10 @@ namespace TurismoNeuquen.Services
 {
     public interface IAdminService
     {
-        IEnumerable<PointOfInterest> GetPOIs();
+        IEnumerable<PointOfInterest> GetUnconfirmedPOIs();
+
+        PointOfInterest GetPOI(int id);
+
         void Confirm(int poiId);
         void DeletePOI(int poiId);
     }

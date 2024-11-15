@@ -5,11 +5,10 @@ namespace TurismoNeuquen.Services
 {
     public interface IPoiService
     {
-        IEnumerable<PointOfInterest> GetPOIs();
+        IEnumerable<PointOfInterest> GetConfirmedPOIs();
         PointOfInterest GetPOI(int id);
-        void UpdatePOI(PointOfInterest poi);
-        void DeletePOI(PointOfInterest poi);
-        void AddPoi(string poiType, string name, string description, double latitude, double longitude, string ImageName,
+
+        void AddPoi(string poiType, string name, string description, double latitude, double longitude, string imagename,
             DateTime? eventDate = null, string? openDays = null, TimeOnly? openingTime = null, TimeOnly? closingTime = null);
     }
 }

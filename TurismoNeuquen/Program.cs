@@ -11,6 +11,7 @@ using System;
 using TurismoNeuquen.Models;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using EjemploComponentes.Services;
+using TurismoNeuquen.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -68,6 +69,7 @@ builder.Services.AddAuthentication(options =>
 });
 
 builder.Services.AddHttpClient<IUploadImage, UploadImage>();
+builder.Services.AddScoped<IPoiRepository, PoiRepository>();
 builder.Services.AddScoped<IAdminService, AdminService>();
 builder.Services.AddScoped<IPoiService, PoiService>();
 builder.Services.AddScoped<ILoginService, LoginService>();

@@ -4,60 +4,32 @@ using System.Collections.Generic;
 using System.Linq;
 using TurismoNeuquen.Data;
 using TurismoNeuquen.Models;
+using TurismoNeuquen.Repositories;
 
 namespace TurismoNeuquen.Services
 {
     public class PoiService : IPoiService
     {
-        private readonly PoiContext _poiContext;
+        private readonly IPoiRepository _poiRepository;
 
-        public PoiService(PoiContext poiContext)
+        public PoiService(IPoiRepository poiRepository)
         {
-            _poiContext = poiContext;
-            _poiContext.Database.EnsureCreated();
+            _poiRepository = poiRepository;
         }
 
         public PointOfInterest GetPOI(int id)
         {
-            return _poiContext.PointsOfInterest.SingleOrDefault(x => x.Id == id);
+            return _poiRepository.GetPOI(id);
         }
 
-        public IEnumerable<PointOfInterest> GetPOIs()
+        public IEnumerable<PointOfInterest> GetConfirmedPOIs()
         {
-            return _poiContext.PointsOfInterest.Where(x => x.State == true);
-        }
-
-        public void UpdatePOI(PointOfInterest poi)
-        {
-            _poiContext.Update(poi);
-            _poiContext.SaveChanges();
-        }
-
-        public void DeletePOI(PointOfInterest poi)
-        {
-            _poiContext.Remove(poi);
-            _poiContext.SaveChanges();
+            return _poiRepository.GetPOIs(true);
         }
 
         public void AddPoi(string poiType, string name, string description, double latitude, double longitude, string imagename, DateTime? eventDate = null, string? openDays = null, TimeOnly? openingTime = null, TimeOnly? closingTime = null)
         {
-            PointOfInterest poi;
-
-            if (poiType == "attraction")
-            {
-                poi = Attraction.Create(name, description, latitude, longitude, imagename, openDays, openingTime, closingTime);
-            }
-            else if (poiType == "event" && eventDate.HasValue)
-            {
-                poi = Event.Create(name, description, latitude, longitude, imagename, eventDate.Value);
-            }
-            else
-            {
-                throw new ArgumentException("Invalid POI type or missing required fields for the type");
-            }
-
-            _poiContext.PointsOfInterest.Add(poi);
-            _poiContext.SaveChanges();
+            _poiRepository.AddPoi(poiType, name, description, latitude, longitude, imagename, eventDate, openDays, openingTime, closingTime);
         }
 
 

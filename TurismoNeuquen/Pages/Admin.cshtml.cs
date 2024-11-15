@@ -26,7 +26,7 @@ namespace TurismoNeuquen.Pages
         {
             try
             {
-                Pois = _adminService.GetPOIs();
+                Pois = _adminService.GetUnconfirmedPOIs();
             }
             catch (Exception ex)
             {

@@ -22,7 +22,7 @@ namespace TurismoNeuquen.Pages
         public void OnGet()
         {
             _logger.LogInformation("Map page loaded.");
-            POIs = new List<PointOfInterest>(_poiService.GetPOIs());
+            POIs = new List<PointOfInterest>(_poiService.GetConfirmedPOIs());
         }
     }
 }
