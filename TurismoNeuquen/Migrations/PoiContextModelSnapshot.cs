@@ -10,7 +10,7 @@ using TurismoNeuquen.Data;
 
 namespace TurismoNeuquen.Migrations
 {
-    [DbContext(typeof(PoiContext))]
+    [DbContext(typeof(dataContext))]
     partial class PoiContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

@@ -11,7 +11,7 @@ using TurismoNeuquen.Data;
 
 namespace TurismoNeuquen.Migrations
 {
-    [DbContext(typeof(PoiContext))]
+    [DbContext(typeof(dataContext))]
     [Migration("20241027232314_InitialCreate")]
     partial class InitialCreate
     {

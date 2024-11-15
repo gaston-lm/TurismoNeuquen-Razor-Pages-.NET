@@ -15,8 +15,6 @@ namespace TurismoNeuquen.Pages
         private readonly IAdminService _adminService;
         private readonly ILogger<AdminModel> _logger;
 
-        private readonly IPoiService _poiService;
-
         public PointOfInterest PointOfInterest { get; set; } = new Attraction();
 
         public Attraction Attraction { get; set; } = new Attraction();
@@ -25,9 +23,8 @@ namespace TurismoNeuquen.Pages
 
         public int Type { get; set; }
 
-        public AdminDetailsPoiModel(IPoiService poiService, IAdminService adminService, ILogger<AdminModel> logger)
+        public AdminDetailsPoiModel(IAdminService adminService, ILogger<AdminModel> logger)
         {
-            _poiService = poiService;
             _adminService = adminService;
             _logger = logger;
         }
@@ -35,7 +32,7 @@ namespace TurismoNeuquen.Pages
         public IActionResult OnGet(int id)
         {
             // Retrieve the PointOfInterest object
-            PointOfInterest = _poiService.GetPOI(id);
+            PointOfInterest = _adminService.GetPOI(id);
 
             // Check if the PointOfInterest was not found
             if (PointOfInterest == null)

@@ -41,7 +41,7 @@ else
 }
 
 // Registrar DbContext con base de datos en memoria
-builder.Services.AddDbContext<PoiContext>(options =>
+builder.Services.AddDbContext<dataContext>(options =>
 {
     //options.UseInMemoryDatabase("bookTestDb");
     options.UseSqlServer(
@@ -100,14 +100,14 @@ app.UseAuthorization();
 // Para compatibilidad con MVC (al desactivar el enrutamiento de endpoint)
 app.UseMvc();
 
-app.MapGet("/PointsOfInterest", (PoiContext context) =>
+app.MapGet("/PointsOfInterest", (dataContext context) =>
 {
     return context.PointsOfInterest.ToList();
 })
 .WithName("GetPOIs")
 .WithOpenApi();
 
-app.MapPost("/PointsOfInterest", (PointOfInterest poi, PoiContext context) =>
+app.MapPost("/PointsOfInterest", (PointOfInterest poi, dataContext context) =>
 {
     context.Add(poi);
     context.SaveChanges();

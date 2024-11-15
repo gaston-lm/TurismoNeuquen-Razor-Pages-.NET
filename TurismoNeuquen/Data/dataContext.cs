@@ -4,9 +4,9 @@ using TurismoNeuquen.Models;
 
 namespace TurismoNeuquen.Data
 {
-    public class PoiContext : DbContext
+    public class dataContext : DbContext
     {
-        public PoiContext(DbContextOptions<PoiContext> options) : base(options)
+        public dataContext(DbContextOptions<dataContext> options) : base(options)
         {
 
         }

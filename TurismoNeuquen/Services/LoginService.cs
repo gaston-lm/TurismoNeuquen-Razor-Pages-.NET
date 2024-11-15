@@ -7,9 +7,9 @@ namespace TurismoNeuquen.Services
 {
     public class LoginService : ILoginService
     {
-        private readonly PoiContext _context;
+        private readonly dataContext _context;
 
-        public LoginService(PoiContext context)
+        public LoginService(dataContext context)
         {
             _context = context;
         }
