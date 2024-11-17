@@ -68,7 +68,7 @@ builder.Services.AddAuthentication(options =>
     options.LoginPath = "/UserLogin"; // Redirect here for the second cookie
 });
 
-builder.Services.AddHttpClient<IUploadImage, UploadImage>();
+builder.Services.AddHttpClient<IUploadImageAPIService, UploadImageAPIService>();
 builder.Services.AddScoped<IPoiRepository, PoiRepository>();
 builder.Services.AddScoped<IAdminService, AdminService>();
 builder.Services.AddScoped<IPoiService, PoiService>();

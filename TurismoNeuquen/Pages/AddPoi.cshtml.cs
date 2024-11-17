@@ -11,9 +11,9 @@ namespace TurismoNeuquen.Pages
     public class AddPoiModel : PageModel
     {
         private readonly IPoiService _poiService;
-        private readonly IUploadImage _uploadImage;
+        private readonly IUploadImageAPIService _uploadImage;
 
-        public AddPoiModel(IPoiService poiService, IUploadImage uploadImage)
+        public AddPoiModel(IPoiService poiService, IUploadImageAPIService uploadImage)
         {
             _poiService = poiService;
             _uploadImage = uploadImage;
@@ -39,14 +39,13 @@ namespace TurismoNeuquen.Pages
 
         public async Task<IActionResult> OnPostAddPOI()
         {
-            // Check if ImageFile is null or empty
-            if (ImageFile == null || ImageFile.Length == 0)
-            {
-                ModelState.AddModelError("ImageFile", "Please select an image file to upload.");
-                return Page(); // Return to the form page with error
-            }
+            ImageName = "";
 
-            ImageName = await _uploadImage.UploadFile(ImageFile);
+            // Check if ImageFile is null or empty
+            if (ImageFile != null)
+            {
+                ImageName = await _uploadImage.UploadFile(ImageFile);
+            }            
 
             // Store the OpenDays string and other data as needed.
             _poiService.AddPoi(PoiType, Name, Description, Latitude, Longitude, ImageName, EventDate, OpenDays, OpeningTime, ClosingTime);

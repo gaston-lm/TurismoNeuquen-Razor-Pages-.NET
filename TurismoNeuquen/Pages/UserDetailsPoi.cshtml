@@ -1,5 +1,5 @@
 ﻿@page
-@model TurismoNeuquen.Pages.AdminDetailsPoiModel
+@model TurismoNeuquen.Pages.UserDetailsPoiModel
 @{
     // Retrieve the POI details from the model
     var poi = Model.PointOfInterest;
@@ -15,25 +15,7 @@
     <div class="row">
         <!-- Map on the left and Details on the right for large screens -->
         <div class="col-md-6 order-md-2">
-
-            <!-- Admin Decision -->
-            <div class="card shadow-sm bg-light">
-                <div class="card-body d-flex justify-content-between align-items-center">
-                    <div>
-                        <h6 class="card-text my-2 fw-bold text-center">Decisión de aceptación</h6>
-                    </div>
-
-                    <div class="d-flex align-items-center gap-2">
-                        <form method="post" asp-page-handler="Confirm" asp-route-id="@poi.Id" style="display:inline;">
-                            <button type="submit" class="btn btn-sm btn-outline-success">Confirmar</button>
-                        </form>
-                        <form method="post" asp-page-handler="Delete" asp-route-id="@poi.Id" style="display:inline;">
-                            <button type="submit" class="btn btn-sm btn-outline-danger">Borrar</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-
+            
             <!-- POI Details Card -->
             <div class="card shadow-sm">
 
@@ -41,7 +23,7 @@
                 {
                     <img src="@poi.ImageName" alt="PoI Image" class="img-fluid w-100 main-img-poi" />
                 }
-                
+
                 <div class="card-header">
                     <h2 class="card-title">@poi.Name</h2>
 
@@ -56,8 +38,13 @@
                         <p class="card-text">Horario: @Model.Attraction.OpeningTime?.ToString("HH:mm") - @Model.Attraction.ClosingTime?.ToString("HH:mm")</p>
                     </div>
 
-                    <h6 class="card-text">Descripción:</h6>
+                    <h7 class="card-text">Descripción:</h7>
                     <p class="card-text">@poi.Description</p>
+                </div>
+
+                <!-- Button for Directions -->
+                <div class="card-body">
+                    <a asp-page="ComoLlegar" asp-route-id="@poi.Id" class="btn btn-secondary">Como Llegar</a>
                 </div>
             </div>
         </div>
@@ -67,8 +54,6 @@
             <div id="poiMap"></div>
         </div>
     </div>
-
-    
 </div>
 
 <!-- Include Leaflet CSS and JavaScript libraries -->

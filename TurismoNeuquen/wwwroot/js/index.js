@@ -12,7 +12,7 @@
         // Loop through each POI and add it as a marker on the map
         pois.forEach(poi => {
             // Construct the URL manually by using the POI ID
-            const detailsUrl = `/DetailsPoi?id=${poi.Id}`;
+            const detailsUrl = `/UserDetailsPoi?id=${poi.Id}`;
 
             // Popup content with a link that directs to the details page
             const popupContent = `
@@ -31,6 +31,6 @@
     // Call the function with data passed from Razor page
     // This function expects a variable 'poisData' to be present
     if (window.poisData) {
-        initMap(window.poisData);
+        initMap(window.poisData, );
     }
 });

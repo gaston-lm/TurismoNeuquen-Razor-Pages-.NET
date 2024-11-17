@@ -32,8 +32,8 @@
                         } else
                         {
                             <li class="nav-item">
-                                <a class="nav-link text-light" asp-area="" asp-page="/#">
-                                    <i class="fas fa-user"></i>Username
+                                <a class="nav-link text-light" asp-page="/Logout" onclick="return confirm('¿Estás seguro de que deseas cerrar sesión?');">
+                                    <i class="fas fa-user"></i> @Context.User.Identity.Name | Cerrar Sesión
                                 </a>
                             </li>
                         }

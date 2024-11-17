@@ -1,33 +1,22 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using TurismoNeuquen.Models;
-using TurismoNeuquen.Services;
-using System.Linq;
-using System.Drawing.Drawing2D;
 
 namespace TurismoNeuquen.Pages
 {
-    public class DetailsPoiModel : PageModel
+    public abstract class BaseDetailsPoiModel : PageModel
     {
-        private readonly IPoiService _poiService;
+        protected abstract PointOfInterest GetPointOfInterest(int id);
 
         public PointOfInterest PointOfInterest { get; set; } = new Attraction();
-
         public Attraction Attraction { get; set; } = new Attraction();
-
         public Event Event { get; set; } = new Event();
-
         public int Type { get; set; }
-
-        public DetailsPoiModel(IPoiService poiService)
-        {
-            _poiService = poiService;
-        }
 
         public IActionResult OnGet(int id)
         {
             // Retrieve the PointOfInterest object
-            PointOfInterest = _poiService.GetPOI(id);
+            PointOfInterest = GetPointOfInterest(id);
 
             // Check if the PointOfInterest was not found
             if (PointOfInterest == null)
@@ -35,17 +24,17 @@ namespace TurismoNeuquen.Pages
                 return NotFound();
             }
 
-            // Now that we know PointOfInterest is not null, determine its type
+            // Determine the type of PointOfInterest
             if (PointOfInterest is Attraction attraction)
             {
                 Type = 1;
-                Attraction = (Attraction)PointOfInterest;
+                Attraction = attraction;
                 Console.Write(Attraction.Name);
             }
             else if (PointOfInterest is Event eventObj)
             {
                 Type = 0;
-                Event = (Event)PointOfInterest;
+                Event = eventObj;
             }
             else
             {
@@ -54,6 +43,23 @@ namespace TurismoNeuquen.Pages
             }
 
             return Page();
+        }
+
+        public string GetOpenDays(string openDaysBinary)
+        {
+            if (string.IsNullOrEmpty(openDaysBinary))
+                return "Not specified";
+
+            var daysOfWeek = new[] { "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo" };
+            var openDays = new List<string>();
+
+            for (int i = 0; i < openDaysBinary.Length && i < daysOfWeek.Length; i++)
+            {
+                if (openDaysBinary[i] == '1')
+                    openDays.Add(daysOfWeek[i]);
+            }
+
+            return string.Join(", ", openDays);
         }
     }
 }

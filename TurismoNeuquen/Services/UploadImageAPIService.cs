@@ -10,11 +10,11 @@ using TurismoNeuquen.Services;
 
 namespace EjemploComponentes.Services
 {
-    public class UploadImage : IUploadImage
+    public class UploadImageAPIService : IUploadImageAPIService
     {
         private readonly HttpClient _httpClient;
 
-        public UploadImage(HttpClient httpClient)
+        public UploadImageAPIService(HttpClient httpClient)
         {
             _httpClient = httpClient;
         }

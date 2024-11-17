@@ -1,7 +1,7 @@
 ﻿namespace TurismoNeuquen.Services
 {
 
-    public interface IUploadImage
+    public interface IUploadImageAPIService
     {
         Task<string> UploadFile(IFormFile file);
     }
