@@ -22,8 +22,8 @@ namespace TurismoNeuquen.Services
 
         public bool ValidateUserCredentials(string username, string password)
         {
-            var admin = _context.Users.FirstOrDefault(a => a.Username == username && a.Password == password);
-            return admin != null;
+            var user = _context.Users.FirstOrDefault(a => a.Username == username && a.Password == password);
+            return user != null;
         }
 
         public async Task<bool> UserExists(string username)
@@ -47,5 +47,12 @@ namespace TurismoNeuquen.Services
 
             return true; // Registration successful
         }
+
+        public string GetUserId(string username, string password)
+        {
+            var user = _context.Users.FirstOrDefault(a => a.Username == username && a.Password == password);
+            return user.Id.ToString();
+        }
+
     }
 }

@@ -17,11 +17,11 @@ namespace TurismoNeuquen.Repositories
 
             if (poiType == "attraction")
             {
-                poi = Attraction.Create(name, description, latitude, longitude, imagename, openDays, openingTime, closingTime);
+                poi = Attraction.Create(name, description, latitude, longitude, imagename, openDays, openingTime, closingTime, 1);
             }
             else if (poiType == "event" && eventDate.HasValue)
             {
-                poi = Event.Create(name, description, latitude, longitude, imagename, eventDate.Value);
+                poi = Event.Create(name, description, latitude, longitude, imagename, eventDate.Value, 1);
             }
             else
             {

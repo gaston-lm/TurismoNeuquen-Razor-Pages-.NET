@@ -28,10 +28,14 @@ namespace TurismoNeuquen.Pages
         {
             if (_loginService.ValidateUserCredentials(Username, Password))
             {
+                var userId = _loginService.GetUserId(Username, Password); // Retrieve the user ID for the username
+
+                Console.WriteLine($"UserId: {userId}");
+
                 var claims = new List<Claim>
                 {
-                    new Claim(ClaimTypes.Name, Username)
-                    // Removed the "IsAdmin" claim for general user login
+                    new Claim(ClaimTypes.Name, Username),
+                    new Claim("UserId", userId) // Add User ID as a custom claim
                 };
 
                 var identity = new ClaimsIdentity(claims, "UserCookie");

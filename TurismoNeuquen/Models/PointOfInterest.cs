@@ -8,4 +8,5 @@ public abstract class PointOfInterest
     public double Longitude { get; set; }
     public bool State { get; set; }
     public string ImageName { get; set; } = string.Empty;
+    public int? UserId { get; set; }
 }

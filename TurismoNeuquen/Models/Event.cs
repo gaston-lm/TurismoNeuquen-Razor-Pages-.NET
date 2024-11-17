@@ -3,9 +3,8 @@
     public class Event : PointOfInterest
     {
         public DateTime EventDate { get; set; }
-        public string Location { get; set; } = string.Empty;
 
-        public static Event Create(string name, string description, double latitude, double longitude,string imagename, DateTime eventDate)
+        public static Event Create(string name, string description, double latitude, double longitude, string imagename, DateTime eventDate, int? UserId)
         {
             return new Event
             {
@@ -13,9 +12,10 @@
                 Description = description,
                 Latitude = latitude,
                 Longitude = longitude,
-                ImageName = imagename,
                 State = false,
-                EventDate = eventDate
+                ImageName = imagename,
+                UserId = UserId,
+                EventDate = eventDate,
             };
         }
     }
