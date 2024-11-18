@@ -1,12 +1,12 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using System.Security.Claims;
 using TurismoNeuquen.Models;
 using TurismoNeuquen.Services;
 
 namespace TurismoNeuquen.Pages
 {
-    // Ensure the user is authenticated using the "CustomCookie" authentication scheme
     [Authorize(AuthenticationSchemes = "UserCookie")]
     public class AddPoiModel : PageModel
     {
@@ -36,9 +36,19 @@ namespace TurismoNeuquen.Pages
         [BindProperty] public string OpenDays { get; set; } // Changed to string for binary representation
         [BindProperty] public TimeOnly? OpeningTime { get; set; }
         [BindProperty] public TimeOnly? ClosingTime { get; set; }
+        public string UserId { get; private set; } // Property to store the UserId
 
         public async Task<IActionResult> OnPostAddPOI()
         {
+            UserId = User.FindFirst("UserId")?.Value;
+
+            if (string.IsNullOrEmpty(UserId))
+            {
+                // Handle the case where the claim is not found
+                ModelState.AddModelError(string.Empty, "UserId claim is missing.");
+                return Page();
+            }
+
             ImageName = "";
 
             // Check if ImageFile is null or empty
@@ -48,7 +58,19 @@ namespace TurismoNeuquen.Pages
             }            
 
             // Store the OpenDays string and other data as needed.
-            _poiService.AddPoi(PoiType, Name, Description, Latitude, Longitude, ImageName, EventDate, OpenDays, OpeningTime, ClosingTime);
+            _poiService.AddPoi(
+                PoiType, 
+                Name, 
+                Description, 
+                Latitude, 
+                Longitude, 
+                ImageName,
+                UserId,
+                EventDate, 
+                OpenDays, 
+                OpeningTime, 
+                ClosingTime
+                );
 
             return RedirectToPage("/Index"); // Redirect to a success page or another appropriate action
         }

@@ -8,5 +8,7 @@
 
         public string Password { get; set; } = string.Empty;
 
+        public ICollection<PointOfInterest> PointsOfInterest { get; set; } = new List<PointOfInterest>();
     }
 }
+

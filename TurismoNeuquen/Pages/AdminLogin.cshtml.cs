@@ -28,16 +28,20 @@ namespace TurismoNeuquen.Pages
         {
             if (_loginService.ValidateCredentials(Username, Password))
             {
+
                 var claims = new List<Claim>
                 {
-                    new Claim(ClaimTypes.Name, Username),
-                    new Claim("IsAdmin", "true") // Custom claim to indicate admin
+                            new Claim("IsAdmin", "true") // Custom claim to indicate admin
                 };
 
-                var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+                var identity = new ClaimsIdentity(claims, "AdminCookie");
                 var principal = new ClaimsPrincipal(identity);
 
-                HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
+                // Sign in to the AdminCookie scheme
+                HttpContext.SignInAsync("AdminCookie", principal, new AuthenticationProperties
+                {
+                    IsPersistent = true, // Persistent cookie for admins
+                });
 
                 return RedirectToPage("/Admin"); // Redirect to Admin page upon successful login
             }

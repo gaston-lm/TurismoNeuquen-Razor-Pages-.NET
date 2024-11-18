@@ -22,7 +22,7 @@
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav ms-auto">
-                        @if (Context.Request.Cookies[".AspNetCore.UserCookie"] == null)
+                        @if (Context.Request.Cookies["UserCookie"] == null)
                         {
                             <li class="nav-item">
                                 <a class="nav-link text-light" asp-area="" asp-page="/UserLogin">
@@ -31,9 +31,12 @@
                             </li>
                         } else
                         {
+                            // Retrieve the Username claim value
+                            var username = Context.User.FindFirst("Username")?.Value;
+                            
                             <li class="nav-item">
                                 <a class="nav-link text-light" asp-page="/Logout" onclick="return confirm('¿Estás seguro de que deseas cerrar sesión?');">
-                                    <i class="fas fa-user"></i> @Context.User.Identity.Name | Cerrar Sesión
+                                    <i class="fas fa-user"></i> @username | Cerrar Sesión
                                 </a>
                             </li>
                         }

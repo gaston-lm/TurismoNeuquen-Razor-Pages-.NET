@@ -27,9 +27,31 @@ namespace TurismoNeuquen.Services
             return _poiRepository.GetPOIs(true);
         }
 
-        public void AddPoi(string poiType, string name, string description, double latitude, double longitude, string imagename, DateTime? eventDate = null, string? openDays = null, TimeOnly? openingTime = null, TimeOnly? closingTime = null)
+        public void AddPoi(
+            string poiType, 
+            string name, 
+            string description, 
+            double latitude, 
+            double longitude, 
+            string imagename, 
+            string UserId, 
+            DateTime? eventDate = null, 
+            string? openDays = null, 
+            TimeOnly? openingTime = null, 
+            TimeOnly? closingTime = null)
         {
-            _poiRepository.AddPoi(poiType, name, description, latitude, longitude, imagename, eventDate, openDays, openingTime, closingTime);
+            _poiRepository.AddPoi(
+                poiType, 
+                name, 
+                description, 
+                latitude, 
+                longitude, 
+                imagename, 
+                UserId, 
+                eventDate, 
+                openDays, 
+                openingTime, 
+                closingTime);
         }
 
 

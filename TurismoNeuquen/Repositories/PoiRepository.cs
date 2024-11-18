@@ -11,17 +11,28 @@ namespace TurismoNeuquen.Repositories
             _dataContext = dataContext;
             _dataContext.Database.EnsureCreated();
         }
-        public void AddPoi(string poiType, string name, string description, double latitude, double longitude, string imagename, DateTime? eventDate = null, string? openDays = null, TimeOnly? openingTime = null, TimeOnly? closingTime = null)
+        public void AddPoi(
+            string poiType, 
+            string name, 
+            string description, 
+            double latitude, 
+            double longitude, 
+            string imagename, 
+            string UserId, 
+            DateTime? eventDate = null, 
+            string? openDays = null, 
+            TimeOnly? openingTime = null, 
+            TimeOnly? closingTime = null)
         {
             PointOfInterest poi;
 
             if (poiType == "attraction")
             {
-                poi = Attraction.Create(name, description, latitude, longitude, imagename, openDays, openingTime, closingTime, 1);
+                poi = Attraction.Create(name, description, latitude, longitude, imagename, openDays, openingTime, closingTime, Int32.Parse(UserId));
             }
             else if (poiType == "event" && eventDate.HasValue)
             {
-                poi = Event.Create(name, description, latitude, longitude, imagename, eventDate.Value, 1);
+                poi = Event.Create(name, description, latitude, longitude, imagename, eventDate.Value, Int32.Parse(UserId));
             }
             else
             {

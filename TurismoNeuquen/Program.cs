@@ -56,16 +56,18 @@ builder.Services.AddDbContext<dataContext>(options =>
 
 builder.Services.AddAuthentication(options =>
 {
-    options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme; // Default scheme
-    options.DefaultChallengeScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+    // No default scheme to enforce explicit specification
+    options.DefaultScheme = null;
 })
-.AddCookie(CookieAuthenticationDefaults.AuthenticationScheme, options =>
+.AddCookie("UserCookie", options =>
 {
-    options.LoginPath = "/AdminLogin"; // Default login path for first cookie
+    options.Cookie.Name = "UserCookie"; // Name of the user cookie
+    options.LoginPath = "/UserLogin";  // Login path for users
 })
-.AddCookie("UserCookie", options => // Custom authentication scheme for the second cookie
+.AddCookie("AdminCookie", options =>
 {
-    options.LoginPath = "/UserLogin"; // Redirect here for the second cookie
+    options.Cookie.Name = "AdminCookie"; // Name of the admin cookie
+    options.LoginPath = "/AdminLogin";  // Login path for admins
 });
 
 builder.Services.AddHttpClient<IUploadImageAPIService, UploadImageAPIService>();

@@ -8,7 +8,8 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace TurismoNeuquen.Pages
 {
-    [Authorize] // Ensure only authenticated users can access this page
+    [Authorize(AuthenticationSchemes = "AdminCookie")]
+    [Authorize(AuthenticationSchemes = "UserCookie")]
     public class AdminModel : PageModel
     {
         private readonly IAdminService _adminService;
