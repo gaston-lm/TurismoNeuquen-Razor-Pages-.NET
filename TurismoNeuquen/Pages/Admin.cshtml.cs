@@ -9,7 +9,6 @@ using Microsoft.AspNetCore.Authorization;
 namespace TurismoNeuquen.Pages
 {
     [Authorize(AuthenticationSchemes = "AdminCookie")]
-    [Authorize(AuthenticationSchemes = "UserCookie")]
     public class AdminModel : PageModel
     {
         private readonly IAdminService _adminService;

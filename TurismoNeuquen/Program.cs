@@ -43,15 +43,7 @@ else
 // Registrar DbContext con base de datos en memoria
 builder.Services.AddDbContext<dataContext>(options =>
 {
-    //options.UseInMemoryDatabase("bookTestDb");
-    options.UseSqlServer(
-        connection, 
-        sqlServerOptions => sqlServerOptions.EnableRetryOnFailure(
-            maxRetryCount: 5,       // Number of retry attempts (default is 6)
-            maxRetryDelay: TimeSpan.FromSeconds(2), // Delay between retries
-            errorNumbersToAdd: null // Custom list of SQL error numbers to add (optional)
-        )
-    );
+    options.UseInMemoryDatabase("LocalSessionDb");
 });
 
 builder.Services.AddAuthentication(options =>

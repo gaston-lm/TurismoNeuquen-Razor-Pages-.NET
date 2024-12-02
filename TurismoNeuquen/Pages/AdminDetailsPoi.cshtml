@@ -4,6 +4,7 @@
     // Retrieve the POI details from the model
     var poi = Model.PointOfInterest;
     var poiJson = System.Text.Json.JsonSerializer.Serialize(Model.PointOfInterest);
+    var type = Model.Type;
 }
 
 <head>
@@ -45,16 +46,22 @@
                 <div class="card-header">
                     <h2 class="card-title">@poi.Name</h2>
 
-                    <!-- Event Details -->
-                    <h6 id="eventFields" class="card-subtitle">@Model.Event.EventDate.ToString("f")</h6>
                 </div>
 
                 <div class="card-body">
+                    <!-- Event Details -->
+                    @if (@type == 0)
+                    {
+                        <h6 id="eventFields" class="card-subtitle">@Model.Event.EventDate.ToString("f")</h6>
+                    }
                     <!-- Attraction Details -->
-                    <div id="attractionFields">
-                        <p class="card-text"> Abierto los días: @Model.GetOpenDays(Model.Attraction.OpenDays)</p>
-                        <p class="card-text">Horario: @Model.Attraction.OpeningTime?.ToString("HH:mm") - @Model.Attraction.ClosingTime?.ToString("HH:mm")</p>
-                    </div>
+                    @if (@type == 1)
+                    {
+                        <div id="attractionFields">
+                            <p class="card-text"> Abierto los días: @Model.GetOpenDays(Model.Attraction.OpenDays)</p>
+                            <p class="card-text">Horario: @Model.Attraction.OpeningTime?.ToString("HH:mm") - @Model.Attraction.ClosingTime?.ToString("HH:mm")</p>
+                        </div>
+                    }
 
                     <h6 class="card-text">Descripción:</h6>
                     <p class="card-text">@poi.Description</p>
@@ -77,7 +84,6 @@
 
 <script>
     window.poiData = @Html.Raw(poiJson);
-    window.type = @Html.Raw(@Model.Type);
 </script>
 
 <!-- Link to the external JavaScript file -->

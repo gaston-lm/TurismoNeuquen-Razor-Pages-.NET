@@ -1,9 +1,5 @@
 ﻿document.addEventListener("DOMContentLoaded", function () {
-
-
-    function initDetails(poiData, type) {
-        showFields(type);
-
+    function initDetails(poiData) {
         // Get the POI latitude and longitude from the Razor model
         const poiLat = poiData.Latitude;
         const poiLng = poiData.Longitude;
@@ -23,24 +19,8 @@
             .openPopup();
     }
 
-    if (window.poiData && window.type) {
-        initDetails(window.poiData, window.type);
+    if (window.poiData) {
+        initDetails(window.poiData);
     }
 
 });
-
-function showFields(type) {
-    // Get the fieldsets for attraction and event
-    const attractionFields = document.getElementById("attractionFields");
-    const eventFields = document.getElementById("eventFields");
-
-    if (type == 1) {
-        // Show the attraction fields and hide the event fields
-        attractionFields.style.display = "block";
-        eventFields.style.display = "none";
-    } else {
-        // Show the event fields and hide the attraction fields
-        attractionFields.style.display = "none";
-        eventFields.style.display = "block";
-    }
-}

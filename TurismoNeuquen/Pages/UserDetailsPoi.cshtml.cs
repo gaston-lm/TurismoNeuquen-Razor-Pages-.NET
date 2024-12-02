@@ -1,8 +1,11 @@
+using Microsoft.AspNetCore.Authorization;
 using TurismoNeuquen.Models;
 using TurismoNeuquen.Services;
 
 namespace TurismoNeuquen.Pages
 {
+    [AllowAnonymous]
+    [Authorize(AuthenticationSchemes = "UserCookie")]
     public class UserDetailsPoiModel : BaseDetailsPoiModel
     {
         private readonly IPoiService _poiService;

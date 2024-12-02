@@ -6,12 +6,12 @@
 }
 
 #attractionFields{
-    display:none;
+    display:block;
     margin-bottom: 10px;
 }
 
 #eventFields {
-    display: none;
+    display: block;
     margin-top: 10px;
     margin-bottom: 10px;
 }

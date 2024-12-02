@@ -8,7 +8,7 @@ namespace TurismoNeuquen.Pages
     {
         protected abstract PointOfInterest GetPointOfInterest(int id);
 
-        public PointOfInterest PointOfInterest { get; set; } = new Attraction();
+        public PointOfInterest PointOfInterest { get; set; } = new Event();
         public Attraction Attraction { get; set; } = new Attraction();
         public Event Event { get; set; } = new Event();
         public int Type { get; set; }
@@ -29,7 +29,6 @@ namespace TurismoNeuquen.Pages
             {
                 Type = 1;
                 Attraction = attraction;
-                Console.Write(Attraction.Name);
             }
             else if (PointOfInterest is Event eventObj)
             {

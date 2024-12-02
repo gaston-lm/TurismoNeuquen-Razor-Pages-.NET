@@ -6,7 +6,7 @@ using TurismoNeuquen.Services;
 
 namespace TurismoNeuquen.Pages
 {
-    [Authorize]
+    [Authorize(AuthenticationSchemes = "AdminCookie")]
     public class AdminDetailsPoiModel : BaseDetailsPoiModel
     {
         private readonly IAdminService _adminService;
