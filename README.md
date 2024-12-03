@@ -5,4 +5,3 @@
 
 - Abrir proyecto TurismoNeuquen.sin en Visual Studio 2022
 - Ejecutar con comando de "play"
-- Puede ser que haya que configurar la DB con una key nueva.
